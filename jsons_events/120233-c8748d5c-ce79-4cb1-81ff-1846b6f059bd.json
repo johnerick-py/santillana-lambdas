@@ -1,0 +1,55 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartircolombia@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/14532931"
+    ],
+    "lrs_id": "7447",
+    "client_id": "7447",
+    "ttl": 1744199984,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/14532931/#/lang/es/pag/b1926e5fecade3300d8d2de33155dc7d",
+    "voided": "false",
+    "id": "f4624ba0-f371-4407-a816-7913ce574458",
+    "date_insert": "2025-03-12T11:59:44.129813+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/experienced",
+    "statement": {
+        "actor": {
+            "name": "20122089",
+            "mbox": "mailto:20122089@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "authority": {
+            "name": "Compartir Colombia",
+            "mbox": "mailto:compartircolombia@correo.com"
+        },
+        "stored": "2025-03-12T11:59:44.129813+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/experienced",
+            "display": {
+                "es-ES": "experimentó",
+                "de-DE": "erlebte",
+                "und": "experienced",
+                "en-US": "experienced",
+                "fr-FR": "a éprouvé"
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/14532931",
+                        "objectType": "Activity"
+                    }
+                ]
+            }
+        },
+        "id": "f4624ba0-f371-4407-a816-7913ce574458",
+        "timestamp": "2025-03-12T11:59:44.150Z",
+        "object": {
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/14532931/#/lang/es/pag/b1926e5fecade3300d8d2de33155dc7d",
+            "objectType": "Activity"
+        }
+    }
+}

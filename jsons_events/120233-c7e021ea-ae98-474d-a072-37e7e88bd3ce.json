@@ -1,0 +1,171 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:unomexico@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27463756"
+    ],
+    "lrs_id": "7449",
+    "client_id": "7448",
+    "ttl": 1744200090,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27463756/interaction/0bda932f53b57bbf13f2e4441031fe10",
+    "voided": "false",
+    "id": "4bfdf18f-2da8-4093-b400-b5940adc552d",
+    "date_insert": "2025-03-12T12:01:30.407893+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+        "actor": {
+            "name": "7880617",
+            "mbox": "mailto:7880617@sistemauno.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "score": {
+                "raw": 85.714285714286,
+                "max": 100,
+                "min": 0
+            },
+            "extensions": {
+                "http://scorm&46;com/extensions/usa-data": {
+                    "analytics": [],
+                    "multipleRecording": "0",
+                    "correctResponsesPattern": "1[.]false[,]2[.]true[,]3[.]true[,]4[.]true[,]5[.]false[,]6[.]true[,]7[.]false",
+                    "response": "1[.]false[,]2[.]true[,]3[.]false[,]4[.]true[,]5[.]false[,]6[.]true[,]7[.]false"
+                }
+            },
+            "success": false,
+            "response": "99106e5696efebf919b4c8e93feba109[.]false[,]5ebb09fe5d7658747e7c20b4d48ee3a9[.]true[,]04f036e488694527f4b3eed30d39157b[.]false[,]6af175f8f39869bd8625a01c4348334d[.]true[,]a226f3eef251e34ad4199a91525fde6c[.]false[,]409b0b50a3c0b007e6a898228b994f25[.]true[,]113b1e3df515b1c2f5e67bb29d488d98[.]false"
+        },
+        "authority": {
+            "name": "UNO México",
+            "mbox": "mailto:unomexico@correo.com"
+        },
+        "stored": "2025-03-12T12:01:30.407893+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "display": {
+                "und": "answered",
+                "en-US": "answered",
+                "en-GB": "answered",
+                "es": "respondió"
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27463756",
+                        "objectType": "Activity"
+                    }
+                ]
+            }
+        },
+        "id": "4bfdf18f-2da8-4093-b400-b5940adc552d",
+        "timestamp": "2025-03-12T12:01:30.296Z",
+        "object": {
+            "definition": {
+                "extensions": {
+                    "http://act_type": {
+                        "activityRefId": "0bda932f53b57bbf13f2e4441031fe10",
+                        "resourceId": "1b1052301027bd4a951c0a1d394cdde0",
+                        "resourceRefId": "0bda932f53b57bbf13f2e4441031fe10",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": false,
+                        "learningUnitRefId": "CODE-205317",
+                        "schoolClassId": "15142087",
+                        "learningObjectiveRefId": "a0e26dd280dc4e689a309ff42af9d161",
+                        "typeActivityIntelligence": "ACT01",
+                        "pageRefId": "4139dfdac894779d330e4aa20a2e66a9",
+                        "levelCode": "-1",
+                        "adventureCode": "-1",
+                        "schoolRefId": "9471",
+                        "infoUserAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Mobile Safari/537.36",
+                        "sectionSubjectRefId": "21618957",
+                        "pageId": "page_4139dfdac894779d330e4aa20a2e66a9",
+                        "descriptionPeriod": "2do.TRIM. CICLO 2024",
+                        "idPeriod": "00000000-0000-1000-0000-000000004848",
+                        "studentRefId": "24693919",
+                        "rolId": "16",
+                        "learningLevelRefId": "-1",
+                        "typeActivityValue": "-1",
+                        "act_type": "TF",
+                        "unitid": "CODE-205317",
+                        "learningObjectiveRefIdAPI": "149",
+                        "infoLocation": "lms30.uno-internacional.com",
+                        "subjectGradeRefId": "258274",
+                        "achievementCode": "-1"
+                    }
+                },
+                "interactionType": "matching",
+                "description": {
+                    "es": "Selecciona si las afirmaciones sobre el calor son verdaderas o falsas.&nbsp;"
+                },
+                "source": [
+                    {
+                        "description": {
+                            "es": "Un joule equivale a 4.186 calorías."
+                        },
+                        "id": "99106e5696efebf919b4c8e93feba109"
+                    },
+                    {
+                        "description": {
+                            "es": "Para mostrar la relación entre fuerza y trabajo, se requiere producir 4.186 joules de trabajo por cada caloría de energía."
+                        },
+                        "id": "5ebb09fe5d7658747e7c20b4d48ee3a9"
+                    },
+                    {
+                        "description": {
+                            "es": "4.186 joules de energía mecánica aumentan la temperatura de un gramo de una masa en un grado Celsius."
+                        },
+                        "id": "04f036e488694527f4b3eed30d39157b"
+                    },
+                    {
+                        "description": {
+                            "es": "Para convertir calorías a joules, las calorías se multiplican por 4.186 joules."
+                        },
+                        "id": "6af175f8f39869bd8625a01c4348334d"
+                    },
+                    {
+                        "description": {
+                            "es": "Para convertir los joules a calorías, los joules se multiplican por 4.186 calorías."
+                        },
+                        "id": "a226f3eef251e34ad4199a91525fde6c"
+                    },
+                    {
+                        "description": {
+                            "es": "Un skater realiza una serie de movimientos y acrobacias en una pista de patinaje. Durante el proceso, la fricción entre las ruedas su tabla y la superficie de la pista genera calor equivalente a 5000 calorías, que debería expresarse en 20 930 joules."
+                        },
+                        "id": "409b0b50a3c0b007e6a898228b994f25"
+                    },
+                    {
+                        "description": {
+                            "es": "Un foco incandescente convencional de 60 vatios produce aproximadamente 837.2 joules de calor por hora, que equivalen a 8.37.2 calorías de calor por hora."
+                        },
+                        "id": "113b1e3df515b1c2f5e67bb29d488d98"
+                    }
+                ],
+                "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                "correctResponsesPattern": [
+                    "99106e5696efebf919b4c8e93feba109[.]false[,]5ebb09fe5d7658747e7c20b4d48ee3a9[.]true[,]04f036e488694527f4b3eed30d39157b[.]true[,]6af175f8f39869bd8625a01c4348334d[.]true[,]a226f3eef251e34ad4199a91525fde6c[.]false[,]409b0b50a3c0b007e6a898228b994f25[.]true[,]113b1e3df515b1c2f5e67bb29d488d98[.]false"
+                ],
+                "target": [
+                    {
+                        "description": {
+                            "es": "true"
+                        },
+                        "id": "true"
+                    },
+                    {
+                        "description": {
+                            "es": "false"
+                        },
+                        "id": "false"
+                    }
+                ]
+            },
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27463756/interaction/0bda932f53b57bbf13f2e4441031fe10",
+            "objectType": "Activity"
+        }
+    }
+}

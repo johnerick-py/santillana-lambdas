@@ -1,0 +1,108 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirchile@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987"
+    ],
+    "lrs_id": "7448",
+    "client_id": "7446",
+    "ttl": 1744200104,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987/interaction/e5f3778e7d5c8ec3cfcb606733f2b6d5",
+    "voided": "false",
+    "id": "b59023ea-1789-4f0c-900e-15c3d7bb41da",
+    "date_insert": "2025-03-12T12:01:44.004852+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+        "actor": {
+            "name": "17787036",
+            "mbox": "mailto:17787036@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "score": {
+                "raw": 100,
+                "max": 100,
+                "min": 0
+            },
+            "extensions": {
+                "http://scorm&46;com/extensions/usa-data": {
+                    "analytics": [],
+                    "multipleRecording": "0",
+                    "correctResponsesPattern": "10[,]10[,]ascendente[,]5.767||5767[,]5.797||5797[,]5.817||5817",
+                    "response": "10[,]10[,]Ascendente[,]5.767[,]5.797[,]5.817"
+                }
+            },
+            "success": true,
+            "response": "10[,]10[,]Ascendente[,]5.767[,]5.797[,]5.817"
+        },
+        "authority": {
+            "name": "Compartir Chile",
+            "mbox": "mailto:compartirchile@correo.com"
+        },
+        "stored": "2025-03-12T12:01:44.004852+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "display": {
+                "und": "answered",
+                "en-US": "answered",
+                "en-GB": "answered",
+                "es": "respondió"
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987",
+                        "objectType": "Activity"
+                    }
+                ]
+            }
+        },
+        "id": "b59023ea-1789-4f0c-900e-15c3d7bb41da",
+        "timestamp": "2025-03-12T12:01:46.137Z",
+        "object": {
+            "definition": {
+                "description": {
+                    "es": "Caso 1&nbsp;(págs. 22-23)De&nbsp;&nbsp;&nbsp;en&nbsp;&nbsp;&nbsp;de manera&nbsp;&nbsp;.&nbsp;5.757,&nbsp;&nbsp;, 5.777, 5787, &nbsp;, 5.807,&nbsp;&nbsp;, 5.827&nbsp;."
+                },
+                "extensions": {
+                    "http://act_type": {
+                        "activityRefId": "e5f3778e7d5c8ec3cfcb606733f2b6d5",
+                        "resourceId": "b9349a368372809074a7aa1ad966ba82",
+                        "resourceRefId": "e5f3778e7d5c8ec3cfcb606733f2b6d5",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "learningUnitRefId": "CODE-105396",
+                        "sectionSubjectRefId": "22807574",
+                        "schoolClassId": "15646032",
+                        "learningObjectiveRefId": "c097649f836a9713a89f525e5e58215e",
+                        "pageId": "page_94735f846dbd64ca4e631147366ab6ea",
+                        "typeActivityIntelligence": "-1",
+                        "pageRefId": "94735f846dbd64ca4e631147366ab6ea",
+                        "studentRefId": "26958250",
+                        "rolId": "16",
+                        "levelCode": "-1",
+                        "learningLevelRefId": "-1",
+                        "adventureCode": "-1",
+                        "typeActivityValue": "-1",
+                        "act_type": "FB",
+                        "unitid": "CODE-105396",
+                        "learningObjectiveRefIdAPI": "-1",
+                        "subjectGradeRefId": "3205",
+                        "achievementCode": "-1",
+                        "schoolRefId": "22386"
+                    }
+                },
+                "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                "correctResponsesPattern": [
+                    "10[,]10[,]ascendente[,]5.767||5767[,]5.797||5797[,]5.817||5817"
+                ],
+                "interactionType": "long-fill-in"
+            },
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987/interaction/e5f3778e7d5c8ec3cfcb606733f2b6d5",
+            "objectType": "Activity"
+        }
+    }
+}

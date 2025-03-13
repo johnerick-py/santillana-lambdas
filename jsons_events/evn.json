@@ -1,0 +1,237 @@
+{
+    "relatedAgents": [
+      "\"mbox\":\"mailto:compartirmexico@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+      "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26311014"
+    ],
+    "lrs_id": "7460",
+    "client_id": "7459",
+    "ttl": 1744200100,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26311014/interaction/b2d3ecec767c45a7a96e0a6235dcc132",
+    "voided": "false",
+    "id": "c061c169-c939-43aa-855c-b53beb486e6a",
+    "date_insert": "2025-03-12T12:01:40.386004+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+      "actor": {
+        "name": "18695015",
+        "mbox": "mailto:18695015@santillanacompartir.com",
+        "objectType": "Agent"
+      },
+      "result": {
+        "score": {
+          "raw": 60,
+          "max": 100,
+          "min": 0
+        },
+        "extensions": {
+          "http://scorm&46;com/extensions/usa-data": {
+            "analytics": [],
+            "multipleRecording": "0",
+            "correctResponsesPattern": "10[.]i[,]1[.]b[,]2[.]c[,]3[.]h[,]4[.]a[,]5[.]j[,]6[.]d[,]7[.]e[,]8[.]f[,]9[.]g",
+            "response": "10[.]i[,]1[.]j[,]2[.]c[,]3[.]h[,]4[.]f[,]5[.]b[,]6[.]d[,]7[.]e[,]8[.]a[,]9[.]g"
+          }
+        },
+        "success": false,
+        "response": "8939f164da9345a6a4542c87825998df[.]a684e26d85624331a7c83d052d3c1780[,]158562b57f5f43679f04d6bb71d6dd50[.]f91c75aff121427fa4cd2f218eaa41f4[,]ca5c0ad5cde4464e84f0d050eb888753[.]be61206f3541497ca909f2d2442bd5e0[,]5fca0547c0b64e43a699bf69877fc3e8[.]95db1562aadf4be88af2f34d551943ae[,]2ad7ba6b1d864c779ff9336b7d259cd8[.]366c13fa4079416aabfd969eac8c1d4c[,]f8c38bc4dbbd4a9894c87aef63469936[.]33175a0453f1441d9741305d6bda9773[,]35414b6e913041e7b3d72e7b603aca16[.]672ca4ad639d4b958bdb9303dca67a57[,]71bcb4be2e184eb2863567d0bcfd14ac[.]b0faa433965d4b33b8052f31304bc792[,]3057f5708542478181084ceb08974fed[.]5158e4d7874445549932634deae243c2[,]27612084a7084f4ea3356c31a19a4d1c[.]6357f94bde784d54945a813f5dfcfb21"
+      },
+      "authority": {
+        "name": "Compartir México",
+        "mbox": "mailto:compartirmexico@correo.com"
+      },
+      "stored": "2025-03-12T12:01:40.386004+00:00",
+      "verb": {
+        "id": "http://adlnet.gov/expapi/verbs/answered",
+        "display": {
+          "und": "answered",
+          "en-US": "answered",
+          "en-GB": "answered",
+          "es": "respondió"
+        }
+      },
+      "context": {
+        "contextActivities": {
+          "parent": [
+            {
+              "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26311014",
+              "objectType": "Activity"
+            }
+          ]
+        }
+      },
+      "id": "c061c169-c939-43aa-855c-b53beb486e6a",
+      "timestamp": "2025-03-12T12:01:40.082Z",
+      "object": {
+        "definition": {
+          "extensions": {
+            "http://act_type": {
+              "activityRefId": "b2d3ecec767c45a7a96e0a6235dcc132",
+              "resourceId": "b6915cec00d64845aa23ce1d7d7e33bd",
+              "resourceRefId": "b2d3ecec767c45a7a96e0a6235dcc132",
+              "sourceRefId": "00000000-0000-0000-0000-000000000002",
+              "inApp": false,
+              "learningUnitRefId": "CODE-ew00oTGi",
+              "schoolClassId": "15338291",
+              "learningObjectiveRefId": "b08ba165be3e6c7ade5f52fcd7648663",
+              "typeActivityIntelligence": "-1",
+              "pageRefId": "ba15a1de47728ba6d8b56141379a5a21",
+              "levelCode": "-1",
+              "adventureCode": "-1",
+              "schoolRefId": "14040",
+              "infoUserAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_7_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) GSA/359.2.735510536 Mobile/15E148 Safari/604.1",
+              "sectionSubjectRefId": "22025325",
+              "pageId": "page_ba15a1de47728ba6d8b56141379a5a21",
+              "descriptionPeriod": "-1",
+              "idPeriod": "-1",
+              "studentRefId": "26088805",
+              "rolId": "16",
+              "learningLevelRefId": "2f2e0d7749414a9094c80921103fd2c1",
+              "typeActivityValue": "-1",
+              "act_type": "DDP",
+              "unitid": "CODE-ew00oTGi",
+              "learningObjectiveRefIdAPI": "-1",
+              "infoLocation": "lms30.santillanacompartir.com",
+              "subjectGradeRefId": "458621",
+              "achievementCode": "-1"
+            }
+          },
+          "interactionType": "matching",
+          "description": {
+            "es": "Coloca cada palabra en el espacio que le corresponde.&nbsp;"
+          },
+          "source": [
+            {
+              "description": {
+                "es": "beneficios."
+              },
+              "id": "8939f164da9345a6a4542c87825998df"
+            },
+            {
+              "description": {
+                "es": "fármacos."
+              },
+              "id": "158562b57f5f43679f04d6bb71d6dd50"
+            },
+            {
+              "description": {
+                "es": "&nbsp;bienestar."
+              },
+              "id": "ca5c0ad5cde4464e84f0d050eb888753"
+            },
+            {
+              "description": {
+                "es": "manipulación genética."
+              },
+              "id": "5fca0547c0b64e43a699bf69877fc3e8"
+            },
+            {
+              "description": {
+                "es": "padecimientos&nbsp;"
+              },
+              "id": "2ad7ba6b1d864c779ff9336b7d259cd8"
+            },
+            {
+              "description": {
+                "es": "vacunas."
+              },
+              "id": "f8c38bc4dbbd4a9894c87aef63469936"
+            },
+            {
+              "description": {
+                "es": "terapia génica."
+              },
+              "id": "35414b6e913041e7b3d72e7b603aca16"
+            },
+            {
+              "description": {
+                "es": "biotecnología."
+              },
+              "id": "71bcb4be2e184eb2863567d0bcfd14ac"
+            },
+            {
+              "description": {
+                "es": "salud."
+              },
+              "id": "3057f5708542478181084ceb08974fed"
+            },
+            {
+              "description": {
+                "es": "efectos."
+              },
+              "id": "27612084a7084f4ea3356c31a19a4d1c"
+            }
+          ],
+          "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+          "correctResponsesPattern": [
+            "8939f164da9345a6a4542c87825998df[.]366c13fa4079416aabfd969eac8c1d4c[,]158562b57f5f43679f04d6bb71d6dd50[.]f91c75aff121427fa4cd2f218eaa41f4[,]ca5c0ad5cde4464e84f0d050eb888753[.]be61206f3541497ca909f2d2442bd5e0[,]5fca0547c0b64e43a699bf69877fc3e8[.]b0faa433965d4b33b8052f31304bc792[,]2ad7ba6b1d864c779ff9336b7d259cd8[.]a684e26d85624331a7c83d052d3c1780[,]f8c38bc4dbbd4a9894c87aef63469936[.]33175a0453f1441d9741305d6bda9773[,]35414b6e913041e7b3d72e7b603aca16[.]672ca4ad639d4b958bdb9303dca67a57[,]71bcb4be2e184eb2863567d0bcfd14ac[.]95db1562aadf4be88af2f34d551943ae[,]3057f5708542478181084ceb08974fed[.]5158e4d7874445549932634deae243c2[,]27612084a7084f4ea3356c31a19a4d1c[.]6357f94bde784d54945a813f5dfcfb21"
+          ],
+          "target": [
+            {
+              "description": {
+                "es": "(1)"
+              },
+              "id": "b0faa433965d4b33b8052f31304bc792"
+            },
+            {
+              "description": {
+                "es": "(2)"
+              },
+              "id": "366c13fa4079416aabfd969eac8c1d4c"
+            },
+            {
+              "description": {
+                "es": "(3)"
+              },
+              "id": "f91c75aff121427fa4cd2f218eaa41f4"
+            },
+            {
+              "description": {
+                "es": "(4)"
+              },
+              "id": "33175a0453f1441d9741305d6bda9773"
+            },
+            {
+              "description": {
+                "es": "(5)"
+              },
+              "id": "672ca4ad639d4b958bdb9303dca67a57"
+            },
+            {
+              "description": {
+                "es": "(6)"
+              },
+              "id": "95db1562aadf4be88af2f34d551943ae"
+            },
+            {
+              "description": {
+                "es": "(7)"
+              },
+              "id": "5158e4d7874445549932634deae243c2"
+            },
+            {
+              "description": {
+                "es": "(8)"
+              },
+              "id": "be61206f3541497ca909f2d2442bd5e0"
+            },
+            {
+              "description": {
+                "es": "(9)"
+              },
+              "id": "6357f94bde784d54945a813f5dfcfb21"
+            },
+            {
+              "description": {
+                "es": "(10)"
+              },
+              "id": "a684e26d85624331a7c83d052d3c1780"
+            }
+          ]
+        },
+        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26311014/interaction/b2d3ecec767c45a7a96e0a6235dcc132",
+        "objectType": "Activity"
+      }
+    }
+  }

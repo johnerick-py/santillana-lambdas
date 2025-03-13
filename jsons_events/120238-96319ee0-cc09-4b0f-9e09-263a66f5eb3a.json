@@ -1,0 +1,52 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirchile@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7448",
+    "client_id": "7446",
+    "ttl": 1744200157,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987",
+    "voided": "false",
+    "id": "f7fff0ab-6858-40d5-b303-06ae50143561",
+    "date_insert": "2025-03-12T12:02:37.067961+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/attempted",
+    "statement": {
+        "actor": {
+            "name": "20261658",
+            "mbox": "mailto:20261658@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "duration": "PT1H52M42S",
+            "score": {
+                "raw": 7,
+                "min": 0,
+                "scaled": 0.07,
+                "max": 100
+            },
+            "completion": false
+        },
+        "authority": {
+            "name": "Compartir Chile",
+            "mbox": "mailto:compartirchile@correo.com"
+        },
+        "stored": "2025-03-12T12:02:37.067961+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/attempted",
+            "display": {
+                "es-ES": "intentó",
+                "de-DE": "versuchte",
+                "und": "attempted",
+                "en-US": "attempted",
+                "fr-FR": "a essayé"
+            }
+        },
+        "id": "f7fff0ab-6858-40d5-b303-06ae50143561",
+        "timestamp": "2025-03-12T12:02:36.867Z",
+        "object": {
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/20779987",
+            "objectType": "Activity"
+        }
+    }
+}

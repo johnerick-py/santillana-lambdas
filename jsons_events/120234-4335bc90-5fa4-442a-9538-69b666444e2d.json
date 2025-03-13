@@ -1,0 +1,159 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:unomexico@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27446795"
+    ],
+    "lrs_id": "7449",
+    "client_id": "7448",
+    "ttl": 1744200152,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27446795/interaction/a2b5d257584b495ebae021559d17a52d",
+    "voided": "false",
+    "id": "306c2d42-4275-48e0-b7d3-107b3fd2371f",
+    "date_insert": "2025-03-12T12:02:32.504677+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+        "actor": {
+            "name": "18552638",
+            "mbox": "mailto:18552638@sistemauno.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "score": {
+                "raw": 100,
+                "max": 100,
+                "min": 0
+            },
+            "extensions": {
+                "http://scorm&46;com/extensions/usa-data": {
+                    "analytics": [],
+                    "multipleRecording": "0",
+                    "correctResponsesPattern": "1[.]true[,]2[.]false[,]3[.]true[,]4[.]false[,]5[.]true",
+                    "response": "1[.]true[,]2[.]false[,]3[.]true[,]4[.]false[,]5[.]true"
+                }
+            },
+            "success": true,
+            "response": "97bd1671155543cf82a65d2267038a74[.]true[,]daf45966ee1c4de5b92837ddcdb50f72[.]false[,]3a865d483c1645a28a502c05c62d9dce[.]true[,]277697557eb74fa18796641c9c34a9d8[.]false[,]ec5f64a6763e4f4da6317a992409d304[.]true"
+        },
+        "authority": {
+            "name": "UNO México",
+            "mbox": "mailto:unomexico@correo.com"
+        },
+        "stored": "2025-03-12T12:02:32.504677+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "display": {
+                "und": "answered",
+                "en-US": "answered",
+                "en-GB": "answered",
+                "es": "respondió"
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27446795",
+                        "objectType": "Activity"
+                    }
+                ]
+            }
+        },
+        "id": "306c2d42-4275-48e0-b7d3-107b3fd2371f",
+        "timestamp": "2025-03-12T12:02:32.485Z",
+        "object": {
+            "definition": {
+                "extensions": {
+                    "http://act_type": {
+                        "activityRefId": "a2b5d257584b495ebae021559d17a52d",
+                        "resourceId": "0d3fd20a62a9d2b00a11ba4552bc56c8",
+                        "resourceRefId": "a2b5d257584b495ebae021559d17a52d",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": false,
+                        "learningUnitRefId": "CODE-Cz2czQR3",
+                        "schoolClassId": "15246532",
+                        "learningObjectiveRefId": "e1752b8ca74d45a5990078ad7256080d",
+                        "typeActivityIntelligence": "ACT01",
+                        "pageRefId": "54ae6c29d53cee490071202f2e02d5eb",
+                        "levelCode": "-1",
+                        "adventureCode": "-1",
+                        "schoolRefId": "1160",
+                        "infoUserAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Mobile/15E148 Safari/604.1",
+                        "sectionSubjectRefId": "21825614",
+                        "pageId": "page_54ae6c29d53cee490071202f2e02d5eb",
+                        "descriptionPeriod": "2do.TRIM. CICLO 2024",
+                        "idPeriod": "00000000-0000-1000-0000-000000004848",
+                        "studentRefId": "25987423",
+                        "rolId": "16",
+                        "learningLevelRefId": "-1",
+                        "typeActivityValue": "-1",
+                        "act_type": "TF",
+                        "unitid": "CODE-Cz2czQR3",
+                        "learningObjectiveRefIdAPI": "763",
+                        "infoLocation": "lms30.uno-internacional.com",
+                        "subjectGradeRefId": "495556",
+                        "achievementCode": "-1"
+                    }
+                },
+                "interactionType": "matching",
+                "description": {
+                    "es": "Indica cuáles sonidos son naturales y cuáles, artificiales.&nbsp;&nbsp;"
+                },
+                "source": [
+                    {
+                        "description": {
+                            "es": "El canto de los pájaros&nbsp;"
+                        },
+                        "id": "97bd1671155543cf82a65d2267038a74"
+                    },
+                    {
+                        "description": {
+                            "es": "La música de un piano."
+                        },
+                        "id": "daf45966ee1c4de5b92837ddcdb50f72"
+                    },
+                    {
+                        "description": {
+                            "es": "La lluvia."
+                        },
+                        "id": "3a865d483c1645a28a502c05c62d9dce"
+                    },
+                    {
+                        "description": {
+                            "es": "El motor encendido de un carro."
+                        },
+                        "id": "277697557eb74fa18796641c9c34a9d8"
+                    },
+                    {
+                        "description": {
+                            "es": "El zumbido de un mosco."
+                        },
+                        "id": "ec5f64a6763e4f4da6317a992409d304"
+                    }
+                ],
+                "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                "correctResponsesPattern": [
+                    "97bd1671155543cf82a65d2267038a74[.]true[,]daf45966ee1c4de5b92837ddcdb50f72[.]false[,]3a865d483c1645a28a502c05c62d9dce[.]true[,]277697557eb74fa18796641c9c34a9d8[.]false[,]ec5f64a6763e4f4da6317a992409d304[.]true"
+                ],
+                "target": [
+                    {
+                        "description": {
+                            "es": "true"
+                        },
+                        "id": "true"
+                    },
+                    {
+                        "description": {
+                            "es": "false"
+                        },
+                        "id": "false"
+                    }
+                ]
+            },
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27446795/interaction/a2b5d257584b495ebae021559d17a52d",
+            "objectType": "Activity"
+        }
+    }
+}

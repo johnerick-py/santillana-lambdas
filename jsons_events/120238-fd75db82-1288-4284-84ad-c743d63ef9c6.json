@@ -1,0 +1,74 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirchile@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7448",
+    "client_id": "7446",
+    "ttl": 1744200090,
+    "activityID": "http://netexlearning.com/learningmaker/compId/CODE-XBiCiyOM",
+    "voided": "false",
+    "id": "604a58b9-5eea-41a8-8035-31689eb8b622",
+    "date_insert": "2025-03-12T12:01:30.024535+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/terminated",
+    "statement": {
+        "actor": {
+            "name": "20342682",
+            "mbox": "mailto:20342682@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "duration": "PT17H48M23S",
+            "score": {
+                "raw": 0,
+                "min": 0,
+                "scaled": 0,
+                "max": 100
+            },
+            "completion": false
+        },
+        "authority": {
+            "name": "Compartir Chile",
+            "mbox": "mailto:compartirchile@correo.com"
+        },
+        "stored": "2025-03-12T12:01:30.024535+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/terminated",
+            "display": {
+                "es-ES": "terminó",
+                "de-DE": "beendete",
+                "und": "terminated",
+                "en-US": "terminated",
+                "fr-FR": "a terminé"
+            }
+        },
+        "id": "604a58b9-5eea-41a8-8035-31689eb8b622",
+        "timestamp": "2025-03-12T11:52:42.539Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "CODE-XBiCiyOM"
+                },
+                "extensions": {
+                    "http://ids": {
+                        "infoUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": false,
+                        "learningUnitRefId": "CODE-XBiCiyOM",
+                        "sectionSubjectRefId": "22773137",
+                        "schoolClassId": "15631630",
+                        "studentRefId": "20342682",
+                        "rolId": "18",
+                        "adventureCode": "-1",
+                        "unitId": "CODE-XBiCiyOM",
+                        "infoLocation": "lms30.santillanacompartir.com",
+                        "subjectGradeRefId": "127177",
+                        "schoolRefId": "13122"
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/CODE-XBiCiyOM",
+            "objectType": "Activity"
+        }
+    }
+}
