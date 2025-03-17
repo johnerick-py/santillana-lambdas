@@ -1,0 +1,53 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirelsalvador@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7463",
+    "client_id": "7462",
+    "ttl": 1744254001,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953",
+    "voided": "false",
+    "id": "20dac52a-73d5-40ee-a8b7-881e52fe7b54",
+    "date_insert": "2025-03-13T03:00:01.159405+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/completed",
+    "statement": {
+        "actor": {
+            "name": "20151458",
+            "mbox": "mailto:20151458@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "duration": "PT5M35S",
+            "score": {
+                "raw": 25,
+                "min": 0,
+                "scaled": 0.25,
+                "max": 100
+            },
+            "completion": true,
+            "success": false
+        },
+        "authority": {
+            "name": "Compartir El Salvador",
+            "mbox": "mailto:compartirelsalvador@correo.com"
+        },
+        "stored": "2025-03-13T03:00:01.159405+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/completed",
+            "display": {
+                "es-ES": "completó",
+                "de-DE": "beendete",
+                "und": "completed",
+                "en-US": "completed",
+                "fr-FR": "a terminé"
+            }
+        },
+        "id": "20dac52a-73d5-40ee-a8b7-881e52fe7b54",
+        "timestamp": "2025-03-13T03:00:01.367Z",
+        "object": {
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953",
+            "objectType": "Activity"
+        }
+    }
+}

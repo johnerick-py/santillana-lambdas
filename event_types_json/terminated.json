@@ -1,0 +1,68 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:unomexico@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7449",
+    "client_id": "7448",
+    "ttl": 1744254001,
+    "activityID": "http://netexlearning.com/learningmaker/compId/910b6cebdb9bc49be0fd90109045eff6",
+    "voided": "false",
+    "id": "52f4d312-3925-4d6f-835b-54dbd230e382",
+    "date_insert": "2025-03-13T03:00:01.051634+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/terminated",
+    "statement": {
+        "actor": {
+            "name": "18651207",
+            "mbox": "mailto:18651207@sistemauno.com",
+            "objectType": "Agent"
+        },
+        "authority": {
+            "name": "UNO México",
+            "mbox": "mailto:unomexico@correo.com"
+        },
+        "stored": "2025-03-13T03:00:01.051634+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/terminated",
+            "display": {
+                "es-ES": "terminó",
+                "de-DE": "beendete",
+                "und": "terminated",
+                "en-US": "terminated",
+                "fr-FR": "a terminé"
+            }
+        },
+        "id": "52f4d312-3925-4d6f-835b-54dbd230e382",
+        "timestamp": "2025-03-13T03:00:00.131Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "pagina"
+                },
+                "extensions": {
+                    "http://ids": {
+                        "infoUserAgent": "Mozilla/5.0 (iPad; CPU OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1 SantillanaUserAgent",
+                        "resourceId": "910b6cebdb9bc49be0fd90109045eff6",
+                        "resourceRefId": "910b6cebdb9bc49be0fd90109045eff6",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": true,
+                        "learningUnitRefId": "CODE-3mnyq7dI",
+                        "sectionSubjectRefId": "21903377",
+                        "schoolClassId": "15284168",
+                        "pageId": "page_910b6cebdb9bc49be0fd90109045eff6",
+                        "pageRefId": "910b6cebdb9bc49be0fd90109045eff6",
+                        "studentRefId": "26053614",
+                        "rolId": "16",
+                        "adventureCode": "-1",
+                        "unitId": "CODE-3mnyq7dI",
+                        "infoLocation": "undefined",
+                        "subjectGradeRefId": "259796",
+                        "schoolRefId": "7890"
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/910b6cebdb9bc49be0fd90109045eff6",
+            "objectType": "Activity"
+        }
+    }
+}

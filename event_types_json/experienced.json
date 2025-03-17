@@ -1,0 +1,68 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartircolombia@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7447",
+    "client_id": "7447",
+    "ttl": 1744253999,
+    "activityID": "http://netexlearning.com/learningmaker/compId/339fe5046992654b068a145347075585",
+    "voided": "false",
+    "id": "bd64873c-437b-417c-a063-849f9f6b8812",
+    "date_insert": "2025-03-13T02:59:59.500371+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/experienced",
+    "statement": {
+        "actor": {
+            "name": "15381759",
+            "mbox": "mailto:15381759@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "authority": {
+            "name": "Compartir Colombia",
+            "mbox": "mailto:compartircolombia@correo.com"
+        },
+        "stored": "2025-03-13T02:59:59.500371+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/experienced",
+            "display": {
+                "es-ES": "experimentó",
+                "de-DE": "erlebte",
+                "und": "experienced",
+                "en-US": "experienced",
+                "fr-FR": "a éprouvé"
+            }
+        },
+        "id": "bd64873c-437b-417c-a063-849f9f6b8812",
+        "timestamp": "2025-01-13T21:47:46.900Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "pagina"
+                },
+                "extensions": {
+                    "http://ids": {
+                        "infoUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+                        "resourceId": "339fe5046992654b068a145347075585",
+                        "resourceRefId": "339fe5046992654b068a145347075585",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": false,
+                        "learningUnitRefId": "CODE-Spvzz6Lh",
+                        "sectionSubjectRefId": "22459735",
+                        "schoolClassId": "15494268",
+                        "pageId": "page_339fe5046992654b068a145347075585",
+                        "pageRefId": "339fe5046992654b068a145347075585",
+                        "studentRefId": "27009509",
+                        "rolId": "16",
+                        "adventureCode": "-1",
+                        "unitId": "CODE-Spvzz6Lh",
+                        "infoLocation": "lms30.santillanacompartir.com",
+                        "subjectGradeRefId": "2057",
+                        "schoolRefId": "16718"
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/339fe5046992654b068a145347075585",
+            "objectType": "Activity"
+        }
+    }
+}

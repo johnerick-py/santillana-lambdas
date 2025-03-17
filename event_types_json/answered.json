@@ -1,0 +1,158 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirelsalvador@correo.com\""
+    ],
+    "active": "true",
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953"
+    ],
+    "lrs_id": "7463",
+    "client_id": "7462",
+    "ttl": 1744253999,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953/interaction/d59161e86cfb4955bd941dba42b07c95",
+    "voided": "false",
+    "id": "56caa31f-ce7f-4052-955c-4ba3efbb4afc",
+    "date_insert": "2025-03-13T02:59:59.259429+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+        "actor": {
+            "name": "20151458",
+            "mbox": "mailto:20151458@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "score": {
+                "raw": 0,
+                "max": 100,
+                "min": 0
+            },
+            "extensions": {
+                "http://scorm&46;com/extensions/usa-data": {
+                    "analytics": [],
+                    "multipleRecording": "0",
+                    "correctResponsesPattern": "1[.]b[,]1[.]c[,]1[.]f[,]1[.]g",
+                    "response": "1[.]a[,]1[.]d[,]1[.]e[,]1[.]h"
+                }
+            },
+            "success": false,
+            "response": "cdf44ea921234980b0d24635db6ade61[,]6027a1cf61db4787b35bbdde77151ad4[,]79b9cc49a9c047ea80cc89b5cff66517[,]67c8ea3014a948d6ab214739f9d9a1b9"
+        },
+        "authority": {
+            "name": "Compartir El Salvador",
+            "mbox": "mailto:compartirelsalvador@correo.com"
+        },
+        "stored": "2025-03-13T02:59:59.259429+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "display": {
+                "und": "answered",
+                "en-US": "answered",
+                "en-GB": "answered",
+                "es": "respondió"
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953",
+                        "objectType": "Activity"
+                    }
+                ]
+            }
+        },
+        "id": "56caa31f-ce7f-4052-955c-4ba3efbb4afc",
+        "timestamp": "2025-03-13T03:00:00.159Z",
+        "object": {
+            "definition": {
+                "description": {
+                    "es": "Indica si las siguientes características del relieve son una ventaja o desventaja para las poblaciones."
+                },
+                "extensions": {
+                    "http://act_type": {
+                        "activityRefId": "d59161e86cfb4955bd941dba42b07c95",
+                        "resourceId": "f9c531c68ad7379e7d7c262ff35f8f50",
+                        "resourceRefId": "d59161e86cfb4955bd941dba42b07c95",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "learningUnitRefId": "es5_u1_leccion03",
+                        "sectionSubjectRefId": "22822245",
+                        "schoolClassId": "15640011",
+                        "learningObjectiveRefId": "8f4a2fa28c81e4c401e3ef383a91130d",
+                        "pageId": "page_0717f2ac6fce26181fee5c837ab785c2",
+                        "typeActivityIntelligence": "-1",
+                        "pageRefId": "0717f2ac6fce26181fee5c837ab785c2",
+                        "studentRefId": "27899269",
+                        "rolId": "16",
+                        "levelCode": "-1",
+                        "learningLevelRefId": "fc32d2dba26d5b3d95105be0f8f6b223",
+                        "adventureCode": "-1",
+                        "typeActivityValue": "-1",
+                        "act_type": "LKT",
+                        "unitid": "es5_u1_leccion03",
+                        "learningObjectiveRefIdAPI": "-1",
+                        "subjectGradeRefId": "2731",
+                        "achievementCode": "-1",
+                        "schoolRefId": "2693"
+                    }
+                },
+                "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                "correctResponsesPattern": [
+                    "d3ca14fadcb44bd6b0cbf423817799c9[,]05ac30ab95444859b5f3ae573a392e45[,]34f4ac19909145619864cf0a61bc4d77[,]fa45132fdd0545ef97df50eac69abd5a"
+                ],
+                "choices": [
+                    {
+                        "description": {
+                            "es": "(1)"
+                        },
+                        "id": "cdf44ea921234980b0d24635db6ade61"
+                    },
+                    {
+                        "description": {
+                            "es": "(2)"
+                        },
+                        "id": "d3ca14fadcb44bd6b0cbf423817799c9"
+                    },
+                    {
+                        "description": {
+                            "es": "(3)"
+                        },
+                        "id": "05ac30ab95444859b5f3ae573a392e45"
+                    },
+                    {
+                        "description": {
+                            "es": "(4)"
+                        },
+                        "id": "6027a1cf61db4787b35bbdde77151ad4"
+                    },
+                    {
+                        "description": {
+                            "es": "(5)"
+                        },
+                        "id": "79b9cc49a9c047ea80cc89b5cff66517"
+                    },
+                    {
+                        "description": {
+                            "es": "(6)"
+                        },
+                        "id": "34f4ac19909145619864cf0a61bc4d77"
+                    },
+                    {
+                        "description": {
+                            "es": "(7)"
+                        },
+                        "id": "fa45132fdd0545ef97df50eac69abd5a"
+                    },
+                    {
+                        "description": {
+                            "es": "(8)"
+                        },
+                        "id": "67c8ea3014a948d6ab214739f9d9a1b9"
+                    }
+                ],
+                "interactionType": "choice"
+            },
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953/interaction/d59161e86cfb4955bd941dba42b07c95",
+            "objectType": "Activity"
+        }
+    }
+}

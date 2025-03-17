@@ -1,0 +1,63 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirmexico@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7460",
+    "client_id": "7459",
+    "ttl": 1744254000,
+    "activityID": "http://netexlearning.com/learningmaker/compId/CODE-cMoUcmm8",
+    "voided": "false",
+    "id": "51319aa8-14c1-48cd-ae39-8369566ebc14",
+    "date_insert": "2025-03-13T03:00:00.063816+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/initialized",
+    "statement": {
+        "actor": {
+            "name": "8040278",
+            "mbox": "mailto:8040278@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "authority": {
+            "name": "Compartir México",
+            "mbox": "mailto:compartirmexico@correo.com"
+        },
+        "stored": "2025-03-13T03:00:00.063816+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/initialized",
+            "display": {
+                "es-ES": "inicializó",
+                "de-DE": "initialisierte",
+                "und": "initialized",
+                "en-US": "initialized",
+                "fr-FR": "a initialisé"
+            }
+        },
+        "id": "51319aa8-14c1-48cd-ae39-8369566ebc14",
+        "timestamp": "2025-03-13T02:59:59.679Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "CODE-cMoUcmm8"
+                },
+                "extensions": {
+                    "http://ids": {
+                        "studentRefId": "25834449",
+                        "rolId": "16",
+                        "infoUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36",
+                        "adventureCode": "-1",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002",
+                        "inApp": false,
+                        "unitId": "CODE-cMoUcmm8",
+                        "infoLocation": "lms30.santillanacompartir.com",
+                        "sectionSubjectRefId": "21797272",
+                        "schoolClassId": "15234537",
+                        "subjectGradeRefId": "466969",
+                        "schoolRefId": "9537"
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/CODE-cMoUcmm8",
+            "objectType": "Activity"
+        }
+    }
+}

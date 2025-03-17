@@ -1,0 +1,52 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirelsalvador@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7463",
+    "client_id": "7462",
+    "ttl": 1744253999,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27679391",
+    "voided": "false",
+    "id": "840bcc08-3a62-4d15-843d-453d6de9517d",
+    "date_insert": "2025-03-13T02:59:59.123487+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/attempted",
+    "statement": {
+        "actor": {
+            "name": "17064332",
+            "mbox": "mailto:17064332@santillanacompartir.com",
+            "objectType": "Agent"
+        },
+        "result": {
+            "duration": "PT59M3S",
+            "score": {
+                "raw": 38,
+                "min": 0,
+                "scaled": 0.38,
+                "max": 100
+            },
+            "completion": false
+        },
+        "authority": {
+            "name": "Compartir El Salvador",
+            "mbox": "mailto:compartirelsalvador@correo.com"
+        },
+        "stored": "2025-03-13T02:59:59.123487+00:00",
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/attempted",
+            "display": {
+                "es-ES": "intentó",
+                "de-DE": "versuchte",
+                "und": "attempted",
+                "en-US": "attempted",
+                "fr-FR": "a essayé"
+            }
+        },
+        "id": "840bcc08-3a62-4d15-843d-453d6de9517d",
+        "timestamp": "2025-03-13T02:59:59.253Z",
+        "object": {
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27679391",
+            "objectType": "Activity"
+        }
+    }
+}
