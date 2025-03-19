@@ -1,0 +1,120 @@
+{
+	"relatedagents": ["mbox:mailto:unomexico@correo.com"],
+	"active": "true",
+	"relatedactivities": [
+		"http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27447153"
+	],
+	"lrsid": "7449",
+	"clientid": "7448",
+	"ttl": 1744833198,
+	"activityid": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27447153/interaction/006666284b3111db9408b15eaed8910a",
+	"voided": "false",
+	"id": "cbddc0c6-c861-4cb1-9fce-86c7559ef733",
+	"dateinsert": "2025-03-19T19:53:18.201421+00:00",
+	"verbid": "http://adlnet.gov/expapi/verbs/answered",
+	"statement": {
+		"actor": {
+			"name": "15819472",
+			"mbox": "mailto:15819472@sistemauno.com",
+			"objecttype": "Agent"
+		},
+		"result": {
+			"score": { "raw": 100, "max": 100, "min": 0 },
+			"extensions": {
+				"http://scorm&46;com/extensions/usadata": {
+					"analytics": [],
+					"response": "1[.]d",
+					"multiplerecording": "0"
+				}
+			},
+			"success": true,
+			"response": "1468bb8d9a296121e79e1bb29a268082"
+		},
+		"authority": {
+			"name": "UNO Mu00e9xico",
+			"mbox": "mailto:unomexico@correo.com"
+		},
+		"stored": "2025-03-19T19:53:18.201421+00:00",
+		"verb": {
+			"id": "http://adlnet.gov/expapi/verbs/answered",
+			"display": {
+				"und": "answered",
+				"enus": "answered",
+				"engb": "answered",
+				"es": "respondiu00f3"
+			}
+		},
+		"context": {
+			"contextactivities": {
+				"parent": [
+					{
+						"id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27447153",
+						"objecttype": "Activity"
+					}
+				]
+			}
+		},
+		"id": "cbddc0c6-c861-4cb1-9fce-86c7559ef733",
+		"timestamp": "2025-03-19T19:53:18.323Z",
+		"object": {
+			"definition": {
+				"description": {
+					"es": "u00bfCuu00e1ntas estrellas le daru00edas a este key?"
+				},
+				"extensions": {
+					"http://acttype": {
+						"activityrefid": "006666284b3111db9408b15eaed8910a",
+						"resourceid": "658855a238122fccd4d4c540dde73049",
+						"resourcerefid": "006666284b3111db9408b15eaed8910a",
+						"sourcerefid": "00000000-0000-0000-0000-000000000002",
+						"inapp": true,
+						"learningunitrefid": "CODE-apctWSaR",
+						"schoolclassid": "15267518",
+						"learningobjectiverefid": "-1",
+						"typeactivityintelligence": "-1",
+						"pagerefid": "bd3fa11e03b239e7c7ab2cf0f455cc49",
+						"levelcode": "-1",
+						"adventurecode": "-1",
+						"schoolrefid": "20657",
+						"infouseragent": "Mozilla/5.0 (iPad; CPU OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1 SantillanaUserAgent",
+						"sectionsubjectrefid": "21868729",
+						"pageid": "page_bd3fa11e03b239e7c7ab2cf0f455cc49",
+						"descriptionperiod": "-1",
+						"idperiod": "-1",
+						"studentrefid": "24718450",
+						"rolid": "16",
+						"learninglevelrefid": "-1",
+						"typeactivityvalue": "01",
+						"unitid": "CODE-apctWSaR",
+						"learningobjectiverefidapi": "-1",
+						"infolocation": "undefined",
+						"subjectgraderefid": "35",
+						"achievementcode": "-1"
+					}
+				},
+				"type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+				"choices": [
+					{
+						"description": { "es": "1" },
+						"id": "f67972c93d8ebd9eb1468d15757cc675"
+					},
+					{
+						"description": { "es": "2" },
+						"id": "6f3dbcdf44b80256f440334ab32a7707"
+					},
+					{
+						"description": { "es": "3" },
+						"id": "5bf96beb61b25d585f7b4683949f5d4d"
+					},
+					{
+						"description": { "es": "4" },
+						"id": "1468bb8d9a296121e79e1bb29a268082"
+					}
+				],
+				"interactiontype": "choice"
+			},
+			"id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27447153/interaction/006666284b3111db9408b15eaed8910a",
+			"objecttype": "Activity"
+		}
+	}
+}

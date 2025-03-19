@@ -1,0 +1,52 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirelsalvador@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7463",
+    "client_id": "7462",
+    "ttl": 1744253999,
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27679391",
+    "voided": "false",
+    "id": "840bcc08-3a62-4d15-843d-453d6de9517d",
+    "date_insert": "2025-03-13T02:59:59.123487+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/attempted",
+    "statement": {
+        "actor": {
+            "name": "17064332", // dim_lrs_actor ; col:actor_name 
+            "mbox": "mailto:17064332@santillanacompartir.com", // dim_lrs_actor ; col:actor_mbox
+            "objectType": "Agent" // dim_lrs_actor ; col:actor_type
+        },
+        "result": {
+            "duration": "PT59M3S", // dim_lrs_result ; col:duration
+            "score": {
+                "raw": 38, // dim_lrs_result ; col:score_raw
+                "min": 0, // dim_lrs_result ; col:score_min
+                "scaled": 0.38, // dim_lrs_result ; col:score_scaled
+                "max": 100 // dim_lrs_result ; col:score_max
+            },
+            "completion": false // dim_lrs_result ; col:completion
+        },
+        "authority": {
+            "name": "Compartir El Salvador", // dim_lrs_authority ; col:authority_name
+            "mbox": "mailto:compartirelsalvador@correo.com" // dim_lrs_authority ; col:authority_mbox
+        },
+        "stored": "2025-03-13T02:59:59.123487+00:00", // dim_lrs_statement ; col:date_stored
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/attempted", // dim_lrs_verb ; col:verb_id
+            "display": {
+                "es-ES": "intentó", // dim_lrs_verb ; col:display_es_es
+                "de-DE": "versuchte", // dim_lrs_verb ; col:display_de_de
+                "und": "attempted", // dim_lrs_verb ; col:display_und
+                "en-US": "attempted", // dim_lrs_verb ; col:display_en_us
+                "fr-FR": "a essayé" // dim_lrs_verb ; col:display_fr_fr
+            }
+        },
+        "id": "840bcc08-3a62-4d15-843d-453d6de9517d",
+        "timestamp": "2025-03-13T02:59:59.253Z",
+        "object": {
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/27679391", // dim_lrs_object ; col: object_id
+            "objectType": "Activity" // dim_lrs_object ; col: object_type
+        }
+    }
+}

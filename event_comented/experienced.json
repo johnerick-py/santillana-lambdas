@@ -1,0 +1,68 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartircolombia@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7447",
+    "client_id": "7447",
+    "ttl": 1744253999,
+    "activityID": "http://netexlearning.com/learningmaker/compId/339fe5046992654b068a145347075585",
+    "voided": "false",
+    "id": "bd64873c-437b-417c-a063-849f9f6b8812",
+    "date_insert": "2025-03-13T02:59:59.500371+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/experienced",
+    "statement": {
+        "actor": {
+            "name": "15381759",  // dim_lrs_actor ; col:actor_name 
+            "mbox": "mailto:15381759@santillanacompartir.com", // dim_lrs_actor ; col:actor_mbox
+            "objectType": "Agent" // dim_lrs_actor ; col:actor_type
+        },
+        "authority": {
+            "name": "Compartir Colombia", // dim_lrs_authority ; col:authority_name
+            "mbox": "mailto:compartircolombia@correo.com" // dim_lrs_authority ; col:authority_mbox
+        },
+        "stored": "2025-03-13T02:59:59.500371+00:00", // dim_lrs_statement ; col:date_stored
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/experienced", // dim_lrs_verb ; col:verb_id
+            "display": {
+                "es-ES": "experimentó", // dim_lrs_verb ; col:display_es_es
+                "de-DE": "erlebte", // dim_lrs_verb ; col:display_de_de
+                "und": "experienced", // dim_lrs_verb ; col:display_und
+                "en-US": "experienced", // dim_lrs_verb ; col:display_en_us
+                "fr-FR": "a éprouvé" // dim_lrs_verb ; col:display_fr_fr
+            }
+        },
+        "id": "bd64873c-437b-417c-a063-849f9f6b8812", 
+        "timestamp": "2025-01-13T21:47:46.900Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "pagina" // dim_lrs_object ; definition_description_es
+                },
+                "extensions": {
+                    "http://ids": {
+                        "infoUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36", // dim_lrs_object_http ; 
+                        "resourceId": "339fe5046992654b068a145347075585", // dim_lrs_object_http ; col:resource_id
+                        "resourceRefId": "339fe5046992654b068a145347075585",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002", // dim_lrs_object_http ; col:source_id
+                        "inApp": false, 
+                        "learningUnitRefId": "CODE-Spvzz6Lh", // dim_lrs_object_http ; col:learning_unit_id
+                        "sectionSubjectRefId": "22459735", // dim_lrs_object_http ; col:section_subject_id
+                        "schoolClassId": "15494268", // dim_lrs_object_http ; col:school_class_id
+                        "pageId": "page_339fe5046992654b068a145347075585", 
+                        "pageRefId": "339fe5046992654b068a145347075585", // dim_lrs_object_http ; col:page_ref_id
+                        "studentRefId": "27009509", // dim_lrs_object_http ; col:student_id
+                        "rolId": "16", // dim_lrs_object_http ; col:role_id
+                        "adventureCode": "-1", // dim_lrs_object_http ; col:adventure_code
+                        "unitId": "CODE-Spvzz6Lh", // dim_lrs_object_http ; col:unit_id
+                        "infoLocation": "lms30.santillanacompartir.com",
+                        "subjectGradeRefId": "2057", // dim_lrs_object_http ; col:subject_grade_id
+                        "schoolRefId": "16718" // dim_lrs_object_http ; col:school_id
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/339fe5046992654b068a145347075585", // dim_lrs_object ; col: object_id
+            "objectType": "Activity" // dim_lrs_object ; col: object_type
+        } 
+    }
+}

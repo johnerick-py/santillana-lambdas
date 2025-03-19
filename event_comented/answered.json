@@ -1,0 +1,166 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:compartirelsalvador@correo.com\""
+    ], // table dim_lrs_statement col related_activities
+    "active": "true", // table dim_lrs_statement col active_status,
+    "relatedActivities": [
+        "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953"
+    ], // table dim_lrs_statement col related_activities
+    "lrs_id": "7463", // todas as tabelas col lrs_id
+    "client_id": "7462", // todas as tabelas col client_id
+    "ttl": 1744253999, 
+    "activityID": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953/interaction/d59161e86cfb4955bd941dba42b07c95",
+    "voided": "false",
+    "id": "56caa31f-ce7f-4052-955c-4ba3efbb4afc", // todas as tabelas col statement_id
+    "date_insert": "2025-03-13T02:59:59.259429+00:00", // table lrs_statement col date_insert
+    "verbID": "http://adlnet.gov/expapi/verbs/answered",
+    "statement": {
+        "actor": {
+            "name": "20151458", // dim_lrs_actor ; col:actor_name
+            "mbox": "mailto:20151458@santillanacompartir.com",// dim_lrs_actor ; col:actor_mbox
+            "objectType": "Agent" // dim_lrs_actor ; col:actor_type
+        },
+        "result": {
+            "score": {
+                "raw": 0, // dim_lrs_result ; col:score_raw
+                "max": 100, // dim_lrs_result ; col:score_max
+                "min": 0 // dim_lrs_result ; col:score_min
+            },
+            "extensions": {
+                "http://scorm&46;com/extensions/usa-data": {
+                    "analytics": [], 
+                    "multipleRecording": "0", // table dim_lrs_scorm col  recording
+                    "correctResponsesPattern": "1[.]b[,]1[.]c[,]1[.]f[,]1[.]g", // table dim_lrs_scorm col pattern_response
+                    "response": "1[.]a[,]1[.]d[,]1[.]e[,]1[.]h" // se conter "response":"data:image" resgatar o base64 para a col image na table dim_lrs_scorm se não inserir na col response
+                }
+            },
+            "success": false,
+            "response": "cdf44ea921234980b0d24635db6ade61[,]6027a1cf61db4787b35bbdde77151ad4[,]79b9cc49a9c047ea80cc89b5cff66517[,]67c8ea3014a948d6ab214739f9d9a1b9" //table dim_lrs_results col response
+        },
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/attempted", // dim_lrs_verb ; col:verb_id
+            "display": {
+                "es-ES": "intentó", // dim_lrs_verb ; col:display_es_es
+                "de-DE": "versuchte", // dim_lrs_verb ; col:display_de_de
+                "und": "attempted", // dim_lrs_verb ; col:display_und
+                "en-US": "attempted", // dim_lrs_verb ; col:display_en_us
+                "fr-FR": "a essayé" // dim_lrs_verb ; col:display_fr_fr
+            },
+        "authority": { 
+            "name": "Compartir El Salvador", // dim_lrs_authority ; col:authority_name
+            "mbox": "mailto:compartirelsalvador@correo.com" // dim_lrs_authority ; col:authority_mbox
+        },
+        "stored": "2025-03-13T02:59:59.259429+00:00", // dim_lrs_statement ; col:date_stored
+            "id": "http://adlnet.gov/expapi/verbs/answered",
+            "display": {
+                "und": "answered",  // dim_lrs_verb ; col:display_und
+                "en-US": "answered", // dim_lrs_verb ; col:display_en_us
+                "en-GB": "answered", 
+                "es": "respondió" // dim_lrs_verb ; col:display_es_es
+            }
+        },
+        "context": {
+            "contextActivities": {
+                "parent": [
+                    {
+                        "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953", // dim_lrs_context  ; col:context_parent
+                        "objectType": "Activity" // dim_lrs_context  ; col:context_parent_object_type
+                    }
+                ]
+            }
+        },
+        "id": "56caa31f-ce7f-4052-955c-4ba3efbb4afc", // dim_lrs_object ; object_id
+        "timestamp": "2025-03-13T03:00:00.159Z",
+        "object": {
+            "definition": {
+                "description": {
+                    "es": "Indica si las siguientes características del relieve son una ventaja o desventaja para las poblaciones." // dim_lrs_object ; definition_description_es
+                },
+                "extensions": {
+                    "http://act_type": {
+                        "activityRefId": "d59161e86cfb4955bd941dba42b07c95", // dim_lrs_object_http ; col:activity_id 
+                        "resourceId": "f9c531c68ad7379e7d7c262ff35f8f50", // dim_lrs_object_http ; col:resource_ref_id
+                        "resourceRefId": "d59161e86cfb4955bd941dba42b07c95", // dim_lrs_object_http ; col:resource_id
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002", // dim_lrs_object_http ; col:source_id
+                        "learningUnitRefId": "es5_u1_leccion03", // dim_lrs_object_http ; col:learning_unit_id
+                        "sectionSubjectRefId": "22822245", // dim_lrs_object_http ; col:section_subject_id
+                        "schoolClassId": "15640011", // dim_lrs_object_http ; col:school_class_id
+                        "learningObjectiveRefId": "8f4a2fa28c81e4c401e3ef383a91130d", // dim_lrs_object_http ; col:learning_objective_id
+                        "pageId": "page_0717f2ac6fce26181fee5c837ab785c2", 
+                        "typeActivityIntelligence": "-1", // dim_lrs_object_http ; col:type_intelligence
+                        "pageRefId": "0717f2ac6fce26181fee5c837ab785c2", // dim_lrs_object_http ; col:page_ref_id
+                        "studentRefId": "27899269", // dim_lrs_object_http ; col:student_id
+                        "rolId": "16", // dim_lrs_object_http ; col:role_id
+                        "levelCode": "-1", // dim_lrs_object_http ; col:level_code
+                        "learningLevelRefId": "fc32d2dba26d5b3d95105be0f8f6b223", // dim_lrs_object_http ; col:learning_level_id
+                        "adventureCode": "-1", // dim_lrs_object_http ; col:adventure_code
+                        "typeActivityValue": "-1",  // dim_lrs_object_http ; col:activity_type
+                        "act_type": "LKT", // dim_lrs_object_http ; col:act_type
+                        "unitid": "es5_u1_leccion03", // dim_lrs_object_http ; col:unit_id
+                        "learningObjectiveRefIdAPI": "-1", // dim_lrs_object_http ; col:learning_objective_id_api
+                        "subjectGradeRefId": "2731",// dim_lrs_object_http ; col:subject_grade_id
+                        "achievementCode": "-1",
+                        "schoolRefId": "2693"// dim_lrs_object_http ; col:school_id
+                    }
+                },
+                "type": "http://adlnet.gov/expapi/activities/cmi.interaction", 
+                "correctResponsesPattern": [
+                    "d3ca14fadcb44bd6b0cbf423817799c9[,]05ac30ab95444859b5f3ae573a392e45[,]34f4ac19909145619864cf0a61bc4d77[,]fa45132fdd0545ef97df50eac69abd5a"
+                ],
+                "choices": [
+                    {
+                        "description": {
+                            "es": "(1)"
+                        },
+                        "id": "cdf44ea921234980b0d24635db6ade61"
+                    },
+                    {
+                        "description": {
+                            "es": "(2)"
+                        },
+                        "id": "d3ca14fadcb44bd6b0cbf423817799c9"
+                    },
+                    {
+                        "description": {
+                            "es": "(3)"
+                        },
+                        "id": "05ac30ab95444859b5f3ae573a392e45"
+                    },
+                    {
+                        "description": {
+                            "es": "(4)"
+                        },
+                        "id": "6027a1cf61db4787b35bbdde77151ad4"
+                    },
+                    {
+                        "description": {
+                            "es": "(5)"
+                        },
+                        "id": "79b9cc49a9c047ea80cc89b5cff66517"
+                    },
+                    {
+                        "description": {
+                            "es": "(6)"
+                        },
+                        "id": "34f4ac19909145619864cf0a61bc4d77"
+                    },
+                    {
+                        "description": {
+                            "es": "(7)"
+                        },
+                        "id": "fa45132fdd0545ef97df50eac69abd5a"
+                    },
+                    {
+                        "description": {
+                            "es": "(8)"
+                        },
+                        "id": "67c8ea3014a948d6ab214739f9d9a1b9"
+                    }
+                ],
+                "interactionType": "choice" // dim_lrs_object ; interaction_type
+            },
+            "id": "http://www.uno-internacional.com/integration/ws/v1/xapi/activities/26744953/interaction/d59161e86cfb4955bd941dba42b07c95", // dim_lrs_object ; col: object_id
+            "objectType": "Activity" // dim_lrs_object ; object_type
+        }
+    }
+}

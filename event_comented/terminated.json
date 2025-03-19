@@ -1,0 +1,68 @@
+{
+    "relatedAgents": [
+        "\"mbox\":\"mailto:unomexico@correo.com\""
+    ],
+    "active": "true",
+    "lrs_id": "7449",
+    "client_id": "7448",
+    "ttl": 1744254001,
+    "activityID": "http://netexlearning.com/learningmaker/compId/910b6cebdb9bc49be0fd90109045eff6",
+    "voided": "false",
+    "id": "52f4d312-3925-4d6f-835b-54dbd230e382",
+    "date_insert": "2025-03-13T03:00:01.051634+00:00",
+    "verbID": "http://adlnet.gov/expapi/verbs/terminated",
+    "statement": {
+        "actor": {
+            "name": "18651207", // dim_lrs_actor ; col:actor_name
+            "mbox": "mailto:18651207@sistemauno.com", // dim_lrs_actor ; col:actor_mbox
+            "objectType": "Agent" // dim_lrs_actor ; col:actor_type
+        },
+        "authority": {
+            "name": "UNO México", // dim_lrs_authority ; col:authority_name 
+            "mbox": "mailto:unomexico@correo.com" // dim_lrs_authority ; col:authority_mbox
+        },
+        "stored": "2025-03-13T03:00:01.051634+00:00", // dim_lrs_statement ; col:date_stored
+        "verb": {
+            "id": "http://adlnet.gov/expapi/verbs/terminated", // dim_lrs_verb ; col:verb_id
+            "display": {
+                "es-ES": "terminó", // dim_lrs_verb ; col:display_es_es
+                "de-DE": "beendete", // dim_lrs_verb ; col:display_de_de
+                "und": "terminated",    // dim_lrs_verb ; col:display_und
+                "en-US": "terminated", // dim_lrs_verb ; col:display_en_us
+                "fr-FR": "a terminé" // dim_lrs_verb ; col:display_fr_fr
+            }
+        },
+        "id": "52f4d312-3925-4d6f-835b-54dbd230e382",
+        "timestamp": "2025-03-13T03:00:00.131Z",
+        "object": {
+            "definition": {
+                "name": {
+                    "und": "pagina" // dim_lrs_object ; definition_description_es
+                },
+                "extensions": {
+                    "http://ids": {
+                        "infoUserAgent": "Mozilla/5.0 (iPad; CPU OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1 SantillanaUserAgent",
+                        "resourceId": "910b6cebdb9bc49be0fd90109045eff6", // dim_lrs_object_http ; col:resource_id
+                        "resourceRefId": "910b6cebdb9bc49be0fd90109045eff6",
+                        "sourceRefId": "00000000-0000-0000-0000-000000000002", // dim_lrs_object_http ; col:source_id
+                        "inApp": true,
+                        "learningUnitRefId": "CODE-3mnyq7dI", // dim_lrs_object_http ; col:learning_unit_id
+                        "sectionSubjectRefId": "21903377", // dim_lrs_object_http ; col:section_subject_id
+                        "schoolClassId": "15284168", // dim_lrs_object_http ; col:school_class_id
+                        "pageId": "page_910b6cebdb9bc49be0fd90109045eff6", 
+                        "pageRefId": "910b6cebdb9bc49be0fd90109045eff6", // dim_lrs_object_http ; col:page_id
+                        "studentRefId": "26053614", // dim_lrs_object_http ; col:student_id
+                        "rolId": "16", // dim_lrs_object_http ; col:role_id
+                        "adventureCode": "-1", // dim_lrs_object_http ; col:adventure_code
+                        "unitId": "CODE-3mnyq7dI", // dim_lrs_object_http ; col:unit_id
+                        "infoLocation": "undefined", // dim_lrs_object_http ; col:info_location
+                        "subjectGradeRefId": "259796", // dim_lrs_object_http ; col:subject_grade_id
+                        "schoolRefId": "7890" // dim_lrs_object_http ; col:school_id
+                    }
+                }
+            },
+            "id": "http://netexlearning.com/learningmaker/compId/910b6cebdb9bc49be0fd90109045eff6", // dim_lrs_object ; col: object_id
+            "objectType": "Activity" // dim_lrs_object ; col: object_type
+        }
+    }
+}

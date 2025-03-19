@@ -170,4 +170,4 @@ def lambda_handler(event, context):
         'body': json.dumps({
             'message': f'Processados {len(event["Records"])} registros com sucesso'
         })
-    }
+    } 
