@@ -1,3 +1,4 @@
+-- gold.dim_lrs_statement
 SELECT
    event.id::VARCHAR AS statement_id,
    event.active::VARCHAR AS active_status,

@@ -1,3 +1,4 @@
+-- tabela gold.dim_lrs_authority
 SELECT
    event.id::VARCHAR AS statement_id,
    event.lrsid::VARCHAR AS lrs_id,

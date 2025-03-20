@@ -1,3 +1,4 @@
+-- tabela dim_lrs_object_http
 SELECT
    event.id::VARCHAR AS statement_id,
    event.lrsid::VARCHAR AS lrs_id,

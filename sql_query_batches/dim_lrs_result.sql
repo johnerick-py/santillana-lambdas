@@ -1,3 +1,4 @@
+-- gold.dim_lrs_result
 SELECT
    event.id::VARCHAR AS statement_id,
    event.lrsid::VARCHAR AS lrs_id,
