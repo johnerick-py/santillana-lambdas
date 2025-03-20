@@ -1,10 +1,9 @@
 import json
 import base64
 import boto3
-import psycopg2
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 
 def transform_keys(obj):
     """
@@ -41,62 +40,48 @@ def transform_keys(obj):
         # Se for um valor primitivo, retornar sem alteração
         return obj
 
-def insert_to_redshift(json_data):
+def save_to_s3(json_data):
     """
-    Insere o JSON processado na tabela lrs_events_all do Redshift
+    Salva o JSON processado no bucket S3
     """
-    # Obter credenciais do Redshift das variáveis de ambiente
-    dbname = os.environ.get('DBNAME')
-    host = os.environ.get('HOST')
-    port = os.environ.get('PORT')
-    user = os.environ.get('USER')
-    password = os.environ.get('PASSWORD')
+    # Inicializar o cliente S3
+    s3_client = boto3.client('s3')
     
-    # Tabela de destino fixa
-    table_name = "lrs_events_all"
+    # Bucket de destino fixo
+    bucket_name = "record-age-exceeded-lrs-baa"
     
-    # Conectar ao Redshift
-    conn = None
-    cursor = None
+    # Criar nome do arquivo no formato event_{year}_{month}_{day}_{timestamp}.json
+    now_utc = datetime.now(timezone.utc)
+    year = now_utc.strftime('%Y')
+    month = now_utc.strftime('%m')
+    day = now_utc.strftime('%d')
+    timestamp = now_utc.strftime('%H%M%S%f')
+    
+    file_name = f"event_{year}_{month}_{day}_{timestamp}.json"
+    
     try:
-        conn = psycopg2.connect(
-            dbname=dbname,
-            host=host,
-            port=port,
-            user=user,
-            password=password
+        # Converter JSON para string
+        json_string = json.dumps(json_data)
+        
+        # Fazer upload do arquivo para o S3
+        s3_client.put_object(
+            Bucket=bucket_name,
+            Key=file_name,
+            Body=json_string,
+            ContentType='application/json'
         )
         
-        cursor = conn.cursor()
-        
-        # Converter JSON para string e escapar caracteres especiais para SQL
-        json_string = json.dumps(json_data).replace("'", "''")
-        
-        # Inserir usando o comando copy para evitar problemas de parsing
-        query = f"INSERT INTO stream_raw.{table_name} (event) VALUES(JSON_PARSE('{json_string}'))"
-        
-        # Executar query
-        cursor.execute(query)
-        conn.commit()
-        
-        print(f"Registro inserido com sucesso na tabela stream_raw.{table_name}")
+        print(f"Arquivo {file_name} salvo com sucesso no bucket {bucket_name}")
+        return file_name
         
     except Exception as e:
-        print(f"Erro ao inserir no Redshift: {str(e)}")
-        if conn:
-            conn.rollback()
+        print(f"Erro ao salvar no S3: {str(e)}")
         raise e
-        
-    finally:
-        if cursor:
-            cursor.close()
-        if conn:
-            conn.close()
 
 def lambda_handler(event, context):
     """
-    Função Lambda para processar registros do Kinesis e inseri-los no Redshift
-    na tabela stream_raw.lrs_events_all
+    Função Lambda para processar registros do Kinesis e salvá-los no S3
+    no bucket record-age-exceeded-lrs-baa
     """
     print("Evento recebido do Kinesis:", json.dumps(event))
     
@@ -107,6 +92,9 @@ def lambda_handler(event, context):
             'statusCode': 200,
             'body': json.dumps({'message': 'Nenhum registro para processar'})
         }
+    
+    # Lista para armazenar os nomes dos arquivos salvos
+    saved_files = []
     
     # Processar cada registro do Kinesis
     for i, record in enumerate(event['Records']):
@@ -126,8 +114,9 @@ def lambda_handler(event, context):
             # Transformar as chaves do JSON
             transformed_json = transform_keys(json_data)
             
-            # Inserir no Redshift na tabela fixa lrs_events_all
-            insert_to_redshift(transformed_json)
+            # Salvar no S3
+            file_name = save_to_s3(transformed_json)
+            saved_files.append(file_name)
             
         except Exception as e:
             print(f"Erro ao processar registro {i+1}: {str(e)}")
@@ -139,6 +128,7 @@ def lambda_handler(event, context):
     return {
         'statusCode': 200,
         'body': json.dumps({
-            'message': f'Processados {len(event["Records"])} registros com sucesso'
+            'message': f'Processados {len(event["Records"])} registros com sucesso',
+            'saved_files': saved_files
         })
     }

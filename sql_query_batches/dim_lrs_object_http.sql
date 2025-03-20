@@ -1,7 +1,7 @@
 SELECT
    event.id::VARCHAR AS statement_id,
-   event.lrs_id::VARCHAR AS lrs_id,
-   event.client_id::VARCHAR AS client_id,
+   event.lrsid::VARCHAR AS lrs_id,
+   event.clientid::VARCHAR AS client_id,
    event.statement.object.definition.extensions."http://acttype".activityrefid::VARCHAR AS activity_id,
    event.statement.object.definition.extensions."http://acttype".resourceid::VARCHAR AS resource_ref_id,
    event.statement.object.definition.extensions."http://acttype".resourcerefid::VARCHAR AS resource_id,
@@ -25,3 +25,4 @@ SELECT
    event.statement.object.definition.extensions."http://acttype".schoolrefid::VARCHAR AS school_id
 FROM
    stream_raw.lrs_events_all
+WHERE event.statement.object.definition.extensions."http://acttype" is not null
