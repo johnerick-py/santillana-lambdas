@@ -13,3 +13,10 @@ SELECT
    event.statement.verb.display.frfr::VARCHAR AS display_fr_fr
 FROM
    stream_raw.lrs_events_all
+   
+   
+REDSHIFT_HOST = "pas-prod-redshift-workgroup.888577054267.us-east-1.redshift-serverless.amazonaws.com"
+REDSHIFT_PORT = "5439"
+REDSHIFT_DB = "datalake"
+REDSHIFT_USER = "admin"
+REDSHIFT_PASSWORD = "IVDMBvybjo842++"
