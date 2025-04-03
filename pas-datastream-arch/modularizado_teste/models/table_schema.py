@@ -2,19 +2,6 @@
 Este módulo define os esquemas das tabelas utilizadas no Redshift.
 """
 
-# Colunas da tabela gold.dim_lrs_result_scorm
-LRS_RESULT_SCORM = [
-    "dt_load",                   #0
-    "id_system",                 #1
-    "lrs_id",                    #2
-    "client_id",                 #3
-    "statement_id",              #4
-    "correct_responses_pattern", #5
-    "response",                  #6
-    "multiple_recording",        #7
-    "image"                      #8
-]
-
 # Colunas da tabela gold.dim_school_class
 DIM_SCHOOL_CLASS = [
 "dt_load",                   #0
@@ -27,7 +14,9 @@ DIM_SCHOOL_CLASS = [
 "library",                   #7
 "forum",                     #8
 "grade_id",                  #9
-"school_class_name"          #10
+"school_class_name",         #10
+"school_grade_group_id",     #11
+"session_id"                 #12
 ]
 
 DIM_SCHOOL_GRADE_GROUP = [
@@ -82,7 +71,11 @@ DIM_SECTION_SUBJECT = [
 "subject_class_name",        #7
 "score_metric",              #8
 "section_subject_weight",    #9
-"order_number"               #10
+"order_number",              #10
+"school_level_id",           #11
+"school_stage_season",       #12
+"school_level_session_id",   #13
+"session_id"                 #14
 ]
 
 DIM_SCHOOL = [
@@ -201,5 +194,9 @@ DIM_CLASS_PARTICIPANT = [
 "section_id",                #3
 "person_role_id",            #4
 "active_status",             #5
-"dt_year"                    #6
+"dt_year",                   #6
+"school_id",                 #7
+"school_level_id",           #8
+"school_stage_season_id",    #9
+"session_id"                 #10
 ]

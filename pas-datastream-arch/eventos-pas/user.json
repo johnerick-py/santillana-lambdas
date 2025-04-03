@@ -43,17 +43,6 @@
 						"buildingSiteNumber": " S/N",
 						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
 					}
-				},
-				{
-					"address": {
-						"addressType": "Shipping",
-						"street": { "line1": "AV NITEROI" },
-						"city": "",
-						"neighborhood": "RETIRO SAO JOAQUIM",
-						"postalCode": "24813-327",
-						"buildingSiteNumber": " S/N",
-						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
-					}
 				}
 			],
 			"phoneNumberList": [
