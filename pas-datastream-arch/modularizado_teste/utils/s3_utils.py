@@ -58,10 +58,11 @@ def save_processed_payload(payload):
     """
     now = datetime.utcnow()
     # Path: s3://.../verb_id/id_lrsid_uuid.json
-    lrs_id = payload.get("lrs_id", "unknown")
-    verb_id = payload.get("verbID", "unknown").split("/")[-1]
-    filename = f"{lrs_id}_{verb_id}_{uuid.uuid4()}.json"
-    key = f"{KEY_PREFIX_PROCESSED}{verb_id}/{now.strftime('%m')}/{now.strftime('%d')}/{now.strftime('%H')}/{lrs_id}/{filename}"
+    action_orig = payload.get("meta", {}).get("action", "unknown")
+    action = action_orig.lower()
+    #verb_id = payload.get("verbID", "unknown").split("/")[-1]
+    filename = f"{action}_{uuid.uuid4()}.json"
+    key = f"{KEY_PREFIX_PROCESSED}/{now.strftime('%m')}/{now.strftime('%d')}/{now.strftime('%H')}/{action}/{filename}"
     
     s3_client.put_object(
         Bucket=BUCKET_NAME,
@@ -73,12 +74,14 @@ def save_processed_payload(payload):
     logger.info(f"Payload processado salvo em: s3://{BUCKET_NAME}/{key}")
     return f"s3://{BUCKET_NAME}/{key}"
 
-def save_unknown_verb_event(payload):
+def save_unknown_pas_event(payload):
     """
     Salva um evento com verbID desconhecido no S3.
     """
-    verb_id = payload.get("verbID", "unknown").split("/")[-1]
-    filename = f"{verb_id}_{uuid.uuid4()}.json"
+    #verb_id = payload.get("verbID", "unknown").split("/")[-1]
+    action_orig = payload.get("meta", {}).get("action", "unknown")
+    action = action_orig.lower()
+    filename = f"{action}_{uuid.uuid4()}.json"
     key = f"{KEY_PREFIX_UNKNOWN}{filename}"
     
     s3_client.put_object(
@@ -88,7 +91,7 @@ def save_unknown_verb_event(payload):
         ContentType='application/json'
     )
     
-    logger.info(f"Evento com verbID desconhecido salvo em: s3://{BUCKET_NAME}/{key}")
+    logger.info(f"Evento com entityKey desconhecido salvo em: s3://{BUCKET_NAME}/{key}")
     return f"s3://{BUCKET_NAME}/{key}"
 
 def save_error_batch(records, table_name):

@@ -8,7 +8,7 @@ from datetime import datetime
 
 # Importação dos módulos
 from config import KINESIS_NAME
-from utils.s3_utils import save_raw_event, save_processed_payload, save_unknown_verb_event
+from utils.s3_utils import save_raw_event, save_processed_payload, save_unknown_pas_event
 from utils.redshift_utils import init_connection_pool, insert_batch_to_redshift
 from processors.event_processor import process_event_by_verb
 
@@ -18,11 +18,22 @@ logger.setLevel(logging.INFO)
 
 # Buffers para os inserts (chave: nome da tabela, valor: lista de tuplas (processed_record, columns_values))
 buffers = {
-    "gold.dim_lrs_verb": [],
-    "gold.dim_lrs_statement": [],
-    "gold.dim_lrs_object_http": [],
-    "gold.dim_lrs_result": [],
-    "gold.dim_lrs_result_scorm": [],
+    "gold.dim_school_class": [],
+    "gold.dim_school_grade_group": [],
+    "gold.dim_school_level_session": [],
+    "gold.dim_session": [],
+    "gold.dim_section_subject": [],
+    "gold.dim_school": [],
+    "gold.dim_school_address": [],
+    "gold.dim_school_phone": [],
+    "gold.dim_school_email": [],
+    "gold.dim_user": [],
+    "gold.dim_user_phone": [],
+    "gold.dim_user_email": [],
+    "gold.dim_user_address": [],
+    "gold.dim_user_group": [],
+    "gold.dim_user_role": [],
+    "gold.dim_class_participant": [],
     "infrastructure.kinesis_log": []
 }
 
@@ -99,7 +110,7 @@ def lambda_handler(event, context):
             
             if processed_dict is None:
                 # VerbID desconhecido: salva no diretório específico
-                save_unknown_verb_event(payload_json)
+                save_unknown_pas_event(payload_json)
             else:
                 # Acumula os registros processados em buffers para cada tabela
                 accumulate_processed_records(processed_dict)
