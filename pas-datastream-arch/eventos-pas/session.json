@@ -1,0 +1,23 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-07T13:55:37.790+00:00",
+		"action": "session_updated",
+		"company": "BR/COMP",
+		"country": "BR",
+		"messageId": "b6a3746c-7214-44bf-a347-6ed89481e162",
+		"entityKey": "SESSION",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "dbbddc3a-bd49-4824-a55c-cf7a3dbe1c9c",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000000000743",
+			"sessionDescription": "2025",
+			"order": 1120,
+			"sessionCode": "2025",
+			"sessionPaying": true,
+			"sessionActive": 1,
+			"empresa": { "refId": "00000000-0000-1000-0000-000000000008" }
+		}
+	}
+}

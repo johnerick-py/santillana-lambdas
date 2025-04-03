@@ -1,0 +1,24 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-03T14:02:07.408+00:00",
+		"action": "schoolLevelSession_created",
+		"company": "BR/RICH",
+		"country": "BR",
+		"messageId": "074cd6ae-8654-420f-9371-41dbe7fc7012",
+		"entityKey": "SCHOOLLEVELSESSION",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "10c10f81-d463-4832-adfb-a7425cec37e6",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000000210080",
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000022618" },
+			"session": { "refId": "00000000-0000-1000-0000-000000000901" },
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000035" },
+			"empresa": { "refId": "00000000-0000-1000-0000-000000000056" },
+			"active": true,
+			"image": "",
+			"paymentAllowed": true
+		}
+	}
+}

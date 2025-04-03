@@ -1,0 +1,18 @@
+{
+	"data": {
+		"eventId": "b972adc6-3636-4d3e-b530-613cee727994",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000018228635",
+			"imageUrl": "https://lms-backend-files-pro.s3.amazonaws.com/ded20b31-2e3b-4939-b17b-8d308fd75240"
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-06T23:56:11.958+00:00",
+		"action": "user_image_updated",
+		"country": "EC",
+		"company": "EC/COMP",
+		"messageId": "eaf0aedd-a8e1-4635-8fb9-f4a81137b100",
+		"entityKey": "USERIMAGE",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

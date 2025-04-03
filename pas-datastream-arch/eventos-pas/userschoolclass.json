@@ -1,0 +1,35 @@
+{
+	"data": {
+		"eventId": "7d624b94-29f9-474f-904a-abe1f66e0de5",
+		"attributes": {
+			"schoolClass": { "refId": "00000000-0000-1000-0000-000015502103" }, // section_id 
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000002485" }, // school_id - criar campo
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000026" }, // school_level_id - criar campo
+			"schoolStageSeason": { "refId": "00000000-0000-1000-0000-000000191016" }, // school_stage_season_id - criar campo
+			"session": { "refId": "00000000-0000-1000-0000-000000000765" }, // session_id - criar campo
+			"userList": [
+				{
+					"personRefId": "00000000-0000-1000-0000-000002134808", // user_id
+					"roleRefId": "00000000-0000-1000-0000-000000000018", // role_id
+					"personRolRefId": "00000000-0000-1000-0000-000039033356", // person_role_id
+					"active": true // active_status
+				},
+				{
+					"personRefId": "00000000-0000-1000-0000-000018348395",
+					"roleRefId": "00000000-0000-1000-0000-000000000018",
+					"personRolRefId": "00000000-0000-1000-0000-000039033320",
+					"active": true
+				}
+			]
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-02T15:24:45.600+00:00",
+		"action": "user_schoolclass_updated",
+		"country": "GT",
+		"company": "GT/COMP",
+		"messageId": "f8fae91a-16d3-4aab-b20f-3c617f04d734",
+		"entityKey": "USERSCHOOLCLASS",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

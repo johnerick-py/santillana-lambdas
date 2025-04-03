@@ -1,0 +1,29 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-02T15:24:16.067+00:00",
+		"action": "schoolGradeGroup_created",
+		"company": "GT/COMP",
+		"country": "GT",
+		"messageId": "337f9370-c13e-403b-aa00-0cb9837fc1f4",
+		"entityKey": "SCHOOLGRADEGROUP",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "68e1e161-935f-4359-9228-a899a4ea8fe4",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000001137713",
+			"schoolLevelSession": {
+				"refId": "00000000-0000-1000-0000-000000191016",
+				"unoSchool": { "refId": "00000000-0000-1000-0000-000000002485" },
+				"session": { "refId": "00000000-0000-1000-0000-000000000765" },
+				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000026" }
+			},
+			"grade": { "refId": "00000000-0000-1000-0000-000000000059" },
+			"group": {
+				"groupDescription": "Grupo J",
+				"refId": "00000000-0000-1000-0000-000000000079"
+			},
+			"alias": "4\u00ba Cuarto grado J"
+		}
+	}
+}

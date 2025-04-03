@@ -1,0 +1,30 @@
+{
+	"data": {
+		"eventId": "a50295cf-9b8b-4411-9d27-c6101d173e94",
+		"attributes": {
+			"person": { "refId": "00000000-0000-1000-0000-000009830010" },
+			"article": { "refId": "00000000-0000-1000-0000-000000115449" },
+			"schoolLevelSession": {
+				"refId": "00000000-0000-1000-0000-000000190148",
+				"unoSchool": { "refId": "00000000-0000-1000-0000-000000006655" },
+				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000024" },
+				"session": { "refId": "00000000-0000-1000-0000-000000000388" }
+			},
+			"notifications": 37
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-02T17:10:54.414+00:00",
+		"action": "userArticleNotification_updated",
+		"country": "CO",
+		"company": "CO/COMP",
+		"messageId": "b881828c-4a8e-44d9-9053-e1b19230eb73",
+		"entityKey": "USERARTICLENOTIFICATION",
+		"providerName": "SMS_SIF_DATA_LOADER_PUBL_PRO"
+	},
+	"recordType": "userarticlenotification",
+	"id": "a50295cf-9b8b-4411-9d27-c6101d173e94",
+	"company": "CO/COMP",
+	"entityKey": null,
+	"userRefId": ""
+}

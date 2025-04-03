@@ -1,0 +1,64 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-03T13:40:09.460+00:00",
+		"action": "unoSchool_created",
+		"company": "",
+		"country": "AR",
+		"messageId": "492d1139-ce7e-47c3-8dcb-8a65aa84e56a",
+		"entityKey": "UNOSCHOOL",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "72455369-e596-4323-bd8a-2021f5252e08",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000000026162", // dim_school = school_id, dim_school_phone = school_phone_id, dim_school_email = school_email_id, dim_school_address = school_address_id
+			"addressList": [ // dim_school_address
+				{
+					"address": {
+						"addressType": "Physical", 
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Mailing",
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Shipping",
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				}
+			],
+			"phoneNumberList": [ // dim_school_phone
+				{ "phoneNumber": { "phoneNumberType": "Main", "number": "" } },
+				{ "phoneNumber": { "phoneNumberType": "Administrative", "number": "" } }
+			], // dim_school_email
+			"schoolEmailList": [
+				{ "schoolEmail": { "email": "compartir@santillana.com" } }
+			],
+			"name": "COLEGIO NUEVO DE LAS LOMAS", // dim_school - name
+			"schoolIdSystem": "SC25.LOMAS", // dim_school - school_id_system
+			"demo": false, // dim_school - demo_status
+			"active": false, // dim_school - active_status
+			"country": { "refId": "00000000-0000-1000-0000-000000000026" } // dim_school - country_id
+		}
+	}
+}

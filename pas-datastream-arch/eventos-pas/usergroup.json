@@ -1,0 +1,31 @@
+{
+	"data": {
+		"eventId": "2ea0616b-157a-441f-a702-080e6063669e",
+		"attributes": {
+			"group": { "refId": "00000000-0000-1000-0000-000000000098" }, // group_id
+			"grade": { "refId": "00000000-0000-1000-0000-000000000072" }, // grade_id
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000024094" }, // school_id
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000029" }, // school_level_id
+			"schoolStageSeason": { "refId": "00000000-0000-1000-0000-000000191672" }, // school_stage_season_id
+			"schoolLevelSession": { "refId": "00000000-0000-1000-0000-000000191672" }, // school_level_session_id
+			"session": { "refId": "00000000-0000-1000-0000-000000001013" }, // session_id
+			"userList": [
+				{
+					"personRefId": "00000000-0000-1000-0000-000018738534", // person_id
+					"roleRefId": "00000000-0000-1000-0000-000000000016", // role_id
+					"personRolRefId": "00000000-0000-1000-0000-000039379010", // person_rol_id
+					"active": true // active_status
+				}
+			]
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-06T16:03:56.736+00:00",
+		"action": "userGroup_updated",
+		"country": "EC",
+		"company": "EC/COMP",
+		"messageId": "bdf0b73a-5b75-43bc-9565-658a4011f5d9",
+		"entityKey": "USERGROUP",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

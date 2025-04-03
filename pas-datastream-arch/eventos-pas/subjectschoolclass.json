@@ -1,0 +1,29 @@
+{
+	"data": {
+		"eventId": "80f53e10-778a-4e37-8684-4ac1315113d9",
+		"attributes": {
+			"subjectSchoolClass": {
+				"subjectSchoolClassRefId": "00000000-0000-1000-0000-000021768473", // subject_class_id
+				"subjectSchoolClassName": "Recursos para el Aula SE", // subject_class_name
+				"subjectGradeSchoolClassRefId": "00000000-0000-1000-0000-000000057332", // subject_grade_id
+				"order": 0, // order_number
+				"subjectRefId": "00000000-0000-1000-0000-000000036097" // subject_id
+			},
+			"schoolClass": { "refId": "00000000-0000-1000-0000-000015221458" }, // school_class_id
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000016193" }, // school_id
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000017" }, // school_level_id - criar campo
+			"schoolStageSeason": { "refId": "00000000-0000-1000-0000-000000181707" }, // school_stage_season - criar campo
+			"schoolLevelSession": { "refId": "00000000-0000-1000-0000-000000181707" }, // school_level_session_id - criar campo
+			"session": { "refId": "00000000-0000-1000-0000-000000000685" } // session_id - criar campo
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-02T14:15:55.315+00:00",
+		"action": "subjectSchoolClass_updated",
+		"country": "MX",
+		"company": "MX/UNOI",
+		"messageId": "218fd2a3-fbff-47bb-aa33-e2850f2c2909",
+		"entityKey": "SUBJECTSCHOOLCLASS",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

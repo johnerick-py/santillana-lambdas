@@ -1,0 +1,32 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-02T13:43:36.226+00:00",
+		"action": "article_updated",
+		"company": "CL/COMP",
+		"country": "CL",
+		"messageId": "1e3d826e-e2cb-4c04-b89e-d1c65453f83a",
+		"entityKey": "ARTICLE",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "6b78d21c-1752-478d-aaa2-5bf27ae045df",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000000185296",
+			"subject": { "refId": "00000000-0000-1000-0000-000000013236" },
+			"image": "",
+			"articleDescription": "Agenda emocional I. Emotilab Santillana",
+			"alternateName": "Agenda emocional I. Emotilab Santillana",
+			"empresa": { "refId": "00000000-0000-1000-0000-000000000015" },
+			"articleCode": "61108633",
+			"order": 0,
+			"ean": "9789560202987",
+			"isbn": "9789560202987",
+			"param": "",
+			"articleType": { "refId": "00000000-0000-1000-0000-000000000122" },
+			"weight": 0,
+			"width": 0,
+			"height": 0,
+			"lenght": 0
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-02T14:14:35.405+00:00",
+		"action": "contactRelationship_created",
+		"company": "BR/SFB",
+		"country": "BR",
+		"messageId": "13e32c74-4f07-4b7c-93e4-cb9324a27724",
+		"entityKey": "CONTACTRELATIONSHIP",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "d49f9f81-be89-47db-9e97-f970e6faa5fc",
+		"attributes": {
+			"relationshipToLearnerType": "Other",
+			"student": {
+				"person": { "refId": "00000000-0000-1000-0000-000019037150" },
+				"refId": "00000000-0000-1000-0000-000026822941"
+			},
+			"contactPerson": { "refId": "00000000-0000-1000-0000-000019048661" }
+		}
+	}
+}

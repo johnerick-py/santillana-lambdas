@@ -1,0 +1,23 @@
+{
+	"data": {
+		"eventId": "f45cab6e-395d-487c-8bf9-73a80108d0ba",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000015502688",
+			"name": "C29 Wemath 4Q",
+			"schoolGradeGroup": { "refId": "00000000-0000-1000-0000-000001137736" },
+			"order": 0,
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000002485" },
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000026" },
+			"session": { "refId": "00000000-0000-1000-0000-000000000765" }
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-02T15:26:13.094+00:00",
+		"action": "schoolclass_created",
+		"country": "GT",
+		"company": "GT/COMP",
+		"messageId": "bda0ec64-5de5-4889-8afd-99e2d981bb2b",
+		"entityKey": "SCHOOLCLASS",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

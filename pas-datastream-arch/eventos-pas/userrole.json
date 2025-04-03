@@ -1,0 +1,34 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-02T13:41:48.556+00:00",
+		"action": "userRole_created",
+		"company": "CL/COMP",
+		"country": "CL",
+		"messageId": "8b77ed31-49e2-48f7-882e-18d6bf8fc5dc",
+		"entityKey": "USERROLE",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "a6768559-805b-4872-b2da-13b1e971d386",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000041034440",
+			"person": { "refId": "00000000-0000-1000-0000-000019257284" },
+			"unoStudent": {
+				"refId": "00000000-0000-1000-0000-000027191018",
+				"schoolGradeGroup": {
+					"refId": "00000000-0000-1000-0000-000001129502",
+					"grade": { "refId": "00000000-0000-1000-0000-000000000182" },
+					"group": { "refId": "00000000-0000-1000-0000-000000000805" }
+				}
+			},
+			"active": true,
+			"schoolLevelSession": {
+				"refId": "00000000-0000-1000-0000-000000206152",
+				"session": { "refId": "00000000-0000-1000-0000-000000000375" },
+				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000053" },
+				"unoSchool": { "refId": "00000000-0000-1000-0000-000000013132" }
+			},
+			"role": { "refId": "00000000-0000-1000-0000-000000000016" }
+		}
+	}
+}

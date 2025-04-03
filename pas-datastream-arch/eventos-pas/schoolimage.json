@@ -1,0 +1,19 @@
+{
+	"data": {
+		"eventId": "26d2a5b2-69a1-47c7-865e-ca5773d26d8f",
+		"attributes": {
+			"unoSchoolRefId": "00000000-0000-1000-0000-000000013086",
+			"schoolLevelRefId": "00000000-0000-1000-0000-000000000026",
+			"imageUrl": "https://lms-provisioning-files-pro.s3.amazonaws.com/logos/21812/logo.blazon.png"
+		}
+	},
+	"meta": {
+		"creationDatetime": "2025-01-07T16:29:38.556+00:00",
+		"action": "school_image_updated",
+		"country": "GT",
+		"company": "GT/COMP",
+		"messageId": "128eff34-afa6-496d-97a7-66ade16ac3b4",
+		"entityKey": "SCHOOLIMAGE",
+		"providerName": "SMS_NETEX_PUBL_PRO"
+	}
+}

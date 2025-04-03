@@ -2,7 +2,7 @@
 Módulo para processamento de eventos baseado no verbID.
 """
 import logging
-from processors.verb_processors import (
+from processors.verb_processor import (
     process_answered_event,
     process_experienced_event,
     process_attempted_event,
