@@ -18,9 +18,9 @@ KINESIS_NAME = "pas-datastream"
 # Configuração do Redshift
 REDSHIFT_CONFIG = {
     'dbname': 'datalake',
-    'user': 'admin',
-    'password': 'IVDMBvybjo842++',  # Idealmente, usar AWS Secrets Manager
-    'host': 'pas-prod-redshift-workgroup.888577054267.us-east-1.redshift-serverless.amazonaws.com',
+    'user': '',
+    'password': '',  # Idealmente, usar AWS Secrets Manager
+    'host': '',
     'port': 5439,
     'sslmode': 'require',
     'keepalives': 1,
