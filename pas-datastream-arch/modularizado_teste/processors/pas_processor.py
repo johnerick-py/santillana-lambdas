@@ -451,7 +451,7 @@ def process_user_event(payload):
             address_record = build_processed_record(
             [
                 (DIM_USER_ADDRESS[1], user_id),
-                (DIM_USER_ADDRESS[2], address_data.get("addressType", None))
+                (DIM_USER_ADDRESS[2], address_data.get("addressType", None)),
                 (DIM_USER_ADDRESS[3], full_address),
                 (DIM_USER_ADDRESS[4], address_data.get("city", None)),
                 (DIM_USER_ADDRESS[5], address_data.get("neighborhood", None)),
@@ -468,7 +468,7 @@ def process_user_event(payload):
         address_record = build_processed_record(
         [
             (DIM_USER_ADDRESS[1], user_id),
-            (DIM_USER_ADDRESS[2], None)
+            (DIM_USER_ADDRESS[2], None),
             (DIM_USER_ADDRESS[3], None),
             (DIM_USER_ADDRESS[4], None),
             (DIM_USER_ADDRESS[5], None),

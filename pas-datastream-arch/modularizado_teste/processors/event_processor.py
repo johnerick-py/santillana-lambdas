@@ -2,7 +2,7 @@
 Módulo para processamento de eventos baseado no entityKey.
 """
 import logging
-from processors.verb_processor import (
+from processors.pas_processor import (
     process_school_level_session_event,
     process_school_class_event,
     process_school_grade_group_event,

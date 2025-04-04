@@ -74,6 +74,7 @@ def flush_buffers_to_redshift():
     for table, records in buffers.items():
         if records:
             try:
+                
                 insert_batch_to_redshift(records, table)
                 # Limpa o buffer após inserção bem-sucedida
                 buffers[table] = []
@@ -114,6 +115,8 @@ def lambda_handler(event, context):
             else:
                 # Acumula os registros processados em buffers para cada tabela
                 accumulate_processed_records(processed_dict)
+                logger.info('printando processed dict')
+                logger.info(f'{processed_dict}')
                 
                 # Salva o payload processado no S3
                 save_processed_payload(payload_json)
