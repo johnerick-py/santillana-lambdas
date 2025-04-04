@@ -1,44 +1,66 @@
 {
-    "meta": {
-      "creationDatetime": "2025-01-02T13:40:47.802+00:00",
-      "action": "user_created",
-      "company": "",
-      "country": "CO",
-      "messageId": "dd88e5cb-18de-451e-83a2-981081aea717",
-      "entityKey": "USER",
-      "providerName": "SMS_CONSUCORP_PUBL_PRO"
-    },
-    "data": {
-      "eventId": "3aa1a714-4973-4518-b77d-207274ceb788",
-      "attributes": {
-        "refId": "00000000-0000-1000-0000-000019257275",
-        "country": {
-          "refId": "00000000-0000-1000-0000-000000000062"
-        },
-        "sex": "Female",
-        "name": {
-          "firstName": "JOHN",
-          "middleName": "TESTE",
-          "lastName": "STREAM"
-        },
-        "birthDate": "2020-05-20",
-        "language": {
-          "refId": "00000000-0000-1000-0000-000000000016"
-        },
-        "addressList": [],
-        "phoneNumberList": [],
-        "personEmailList": [],
-        "user": {
-          "username": "teste.teste.8",
-          "active": true
-        },
-        "createdAt": 0,
-        "dischargeDate": 0,
-        "image": "",
-        "oficialId": "1035016470",
-        "timeZone": {
-          "name": "America/Bogota"
-        }
-      }
-    }
-  }
+	"meta": {
+		"creationDatetime": "2025-01-02T13:09:29.848+00:00",
+		"action": "user_updated",
+		"company": "",
+		"country": "BR",
+		"messageId": "81db0ec4-5a4b-4167-8a33-5e12080c7249",
+		"entityKey": "USER",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "8123a63e-286f-4458-9008-19d5507cfc26",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000019256770",
+			"country": { "refId": "00000000-0000-1000-0000-000000000044" },
+			"sex": "Female",
+			"name": {
+				"firstName": "JOHN",
+				"middleName": "TESTE",
+				"lastName": "TESTELIST"
+			},
+			"birthDate": "",
+			"language": { "refId": "00000000-0000-1000-0000-000000000000" },
+			"addressList": [
+				{
+					"address": {
+						"addressType": "Physical",
+						"street": { "line1": "AV NITEROI" },
+						"city": "",
+						"neighborhood": "RETIRO SAO JOAQUIM",
+						"postalCode": "24813-327",
+						"buildingSiteNumber": " S/N",
+						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Mailing",
+						"street": { "line1": "AV NITEROI" },
+						"city": "ITABORA\u00cd",
+						"neighborhood": "RETIRO SAO JOAQUIM",
+						"postalCode": "24813-327",
+						"buildingSiteNumber": " S/N",
+						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
+					}
+				}
+			],
+			"phoneNumberList": [
+				{
+					"phoneNumber": {
+						"phoneNumberType": "Home",
+						"number": "21 99982 6115"
+					}
+				}
+			],
+			"personEmailList": [
+				{ "personEmail": { "email": "john@gmail.com" } }
+			],
+			"createdAt": 0,
+			"dischargeDate": 0,
+			"image": "",
+			"oficialId": "",
+			"timeZone": { "name": "America/Mexico_City" }
+		}
+	}
+}

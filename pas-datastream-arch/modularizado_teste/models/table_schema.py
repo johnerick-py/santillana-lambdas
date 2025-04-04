@@ -124,7 +124,7 @@ DIM_USER = [
 "birth_date",                #8
 "gender",                    #9
 "fiscal_id",                 #10
-"official_id",               #11
+"oficial_id",               #11
 "uno_user_name",             #12
 "active_status"              #13
 ]

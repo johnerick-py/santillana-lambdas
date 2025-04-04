@@ -56,6 +56,17 @@ def build_kinesis_log_record(record, s3_uri):
     }
     return log_record
 
+# def accumulate_processed_records(processed_dict):
+#     """
+#     Acumula os registros processados nos buffers por tabela.
+#     """
+#     if not processed_dict:
+#         return
+        
+#     for table, record_tuple in processed_dict.items():
+#         if record_tuple is not None:
+#             buffers[table].append(record_tuple)
+
 def accumulate_processed_records(processed_dict):
     """
     Acumula os registros processados nos buffers por tabela.
@@ -63,9 +74,18 @@ def accumulate_processed_records(processed_dict):
     if not processed_dict:
         return
         
-    for table, record_tuple in processed_dict.items():
-        if record_tuple is not None:
-            buffers[table].append(record_tuple)
+    for table, record_data in processed_dict.items():
+        logger.info(f"processando accumulate")
+        logger.info(f"processando accumulate")
+        if record_data is not None:
+            # Verificar se é uma lista (para tabelas que retornam múltiplos registros)
+            if isinstance(record_data, list):
+                for item in record_data:
+                    if item is not None:
+                        buffers[table].append(item)
+            else:
+                # Para tabelas que retornam um único registro
+                buffers[table].append(record_data)
 
 def flush_buffers_to_redshift():
     """
@@ -73,6 +93,7 @@ def flush_buffers_to_redshift():
     """
     for table, records in buffers.items():
         if records:
+            logger.info(f"flush buffer")
             try:
                 
                 insert_batch_to_redshift(records, table)
@@ -87,6 +108,7 @@ def lambda_handler(event, context):
     Função principal da Lambda que processa eventos do Kinesis.
     """
     logger.info(f"Iniciando processamento de {len(event)} registros")
+    logger.info(f"teste")
     
     # Inicializa o pool de conexões
     init_connection_pool()
@@ -112,6 +134,8 @@ def lambda_handler(event, context):
             if processed_dict is None:
                 # VerbID desconhecido: salva no diretório específico
                 save_unknown_pas_event(payload_json)
+                logger.info('printando processed dict None')
+                logger.info(f'{processed_dict}')
             else:
                 # Acumula os registros processados em buffers para cada tabela
                 accumulate_processed_records(processed_dict)

@@ -196,7 +196,9 @@ def process_uno_school_event(payload):
         # Loop através de cada endereço na addressList
         for idx, address_item in enumerate(payload.get("data", {}).get("attributes", {}).get("addressList", [])):
             # Constrói um registro processado para cada endereço na lista
-            full_address = address_item.get("city", None) + address_item.get("neighborhood", None) + address_item.get("street", {}).get("line1", None) + address_item.get("postalCode")
+            full_address = address_item.get("city", "") + " " +  address_item.get("neighborhood", "") + " " + address_item.get("street", {}).get("line1", "") + address_item.get("postalCode")
+            logger.info(f"{full_address}")
+
             
             address_record = build_processed_record(
             [
@@ -334,9 +336,9 @@ def process_user_event(payload):
             (DIM_USER[8], payload.get("data", {}).get("attributes", {}).get("birthDate", None)), #birth_date
             (DIM_USER[9], payload.get("data", {}).get("attributes", {}).get("sex", None)), #gender
             (DIM_USER[10], payload.get("data", {}).get("attributes", {}).get("fiscal_id", None)), #fiscal_id nao achei
-            (DIM_USER[11], payload.get("data", {}).get("attributes", {}).get("oficialId", None)), #official_id
-            (DIM_USER[12], payload.get("data", {}).get("attributes", {}).get("uno_user_name", None)), #uno_user_name nao achei
-            (DIM_USER[13], payload.get("data", {}).get("attributes", {}).get("active_status", None)) #active_status nao achei
+            (DIM_USER[11], payload.get("data", {}).get("attributes", {}).get("oficialId", None)), #oficial_id
+            (DIM_USER[12], payload.get("data", {}).get("attributes", {}).get("user", {}).get("username", None)), #uno_user_name nao achei
+            (DIM_USER[13], payload.get("data", {}).get("attributes", {}).get("user", {}).get("active", None)) #active_status nao achei
         ],
         DIM_USER
     )
@@ -393,6 +395,8 @@ def process_user_event(payload):
     #     DIM_USER_EMAIL
     # )
     
+    processed['gold.dim_user_email'] = []  # Inicializa como uma lista vazia = []
+
     user_email_list = payload.get("data", {}).get("attributes", {}).get("userEmailList", [])
     if user_email_list:
         # Loop através de cada email na lista
@@ -435,6 +439,8 @@ def process_user_event(payload):
     #     ],
     #     DIM_USER_ADDRESS
     # )
+
+    processed['gold.dim_user_address'] = []
     
     user_address_list = payload.get("data", {}).get("attributes", {}).get("addressList", [])
     country_id = payload.get("data", {}).get("attributes", {}).get("country", {}).get("refId", None)
@@ -445,7 +451,7 @@ def process_user_event(payload):
             # Extrai os dados do endereço
             address_data = address_item.get("address", {})
             
-            full_address = address_data.get("city", None) + " " + address_data.get("neighborhood", None) + " " + address_data.get("street", {}).get("line1", None) 
+            full_address = address_data.get("city", "") + " " + address_data.get("neighborhood", "") + " " + address_data.get("street", {}).get("line1", "") 
             
             # Constrói um registro processado para cada endereço na lista
             address_record = build_processed_record(
