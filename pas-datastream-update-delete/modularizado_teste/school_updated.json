@@ -1,0 +1,64 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-03T13:40:09.460+00:00",
+		"action": "unoSchool_updated",
+		"company": "",
+		"country": "AR",
+		"messageId": "492d1139-ce7e-47c3-8dcb-8a65aa84e56a",
+		"entityKey": "UNOSCHOOL",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "72455369-e596-4323-bd8a-2021f5252e08",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-010000026162", 
+			"addressList": [ 
+				{
+					"address": {
+						"addressType": "Physical", 
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Mailing",
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Shipping",
+						"street": { "line1": "GRIERSON" },
+						"city": "BUENOS AIRES",
+						"neighborhood": "CABA",
+						"postalCode": "1414",
+						"buildingSiteNumber": "",
+						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+					}
+				}
+			],
+			"phoneNumberList": [ 
+				{ "phoneNumber": { "phoneNumberType": "Main", "number": "" } },
+				{ "phoneNumber": { "phoneNumberType": "Administrative", "number": "" } }
+			], 
+			"schoolEmailList": [
+				{ "schoolEmail": { "email": "compartir@santillana.com" } }
+			],
+			"name": "COLEGIO TESTE STREAMING UPSERT", 
+			"schoolIdSystem": "SC25.TESTE", 
+			"demo": false, 
+			"active": false, 
+			"country": { "refId": "00000000-0000-1000-0000-000000000026" } 
+		}
+	}
+}

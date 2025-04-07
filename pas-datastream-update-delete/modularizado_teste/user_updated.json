@@ -1,0 +1,66 @@
+{
+	"meta": {
+		"creationDatetime": "2025-01-02T13:09:29.848+00:00",
+		"action": "user_updated",
+		"company": "",
+		"country": "BR",
+		"messageId": "81db0ec4-5a4b-4167-8a33-5e12080c7249",
+		"entityKey": "USER",
+		"providerName": "SMS_CONSUCORP_PUBL_PRO"
+	},
+	"data": {
+		"eventId": "8123a63e-286f-4458-9008-19d5507cfc26",
+		"attributes": {
+			"refId": "00000000-0000-1000-0000-000019256770",
+			"country": { "refId": "00000000-0000-1000-0000-000000000044" },
+			"sex": "Male",
+			"name": {
+				"firstName": "JOHN",
+				"middleName": "TESTEUSERT",
+				"lastName": "TESTEUPDATED2"
+			},
+			"birthDate": "",
+			"language": { "refId": "00000000-0000-1000-0000-000000000000" },
+			"addressList": [
+				{
+					"address": {
+						"addressType": "Physical",
+						"street": { "line1": "AV NITEROI" },
+						"city": "",
+						"neighborhood": "RETIRO SAO JOAQUIM",
+						"postalCode": "24813-327",
+						"buildingSiteNumber": " S/N",
+						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
+					}
+				},
+				{
+					"address": {
+						"addressType": "Mailing",
+						"street": { "line1": "AV NITEROI" },
+						"city": "ITABORA\u00cd",
+						"neighborhood": "RETIRO SAO JOAQUIM",
+						"postalCode": "24813-327",
+						"buildingSiteNumber": " S/N",
+						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
+					}
+				}
+			],
+			"phoneNumberList": [
+				{
+					"phoneNumber": {
+						"phoneNumberType": "Home",
+						"number": "21 99982 6115"
+					}
+				}
+			],
+			"personEmailList": [
+				{ "personEmail": { "email": "john@gmail.com" } }
+			],
+			"createdAt": 0,
+			"dischargeDate": 0,
+			"image": "",
+			"oficialId": "",
+			"timeZone": { "name": "America/Mexico_City" }
+		}
+	}
+}
