@@ -6,6 +6,7 @@ import boto3
 import uuid
 import logging
 from datetime import datetime
+from botocore.config import Config
 
 from config import (
     BUCKET_NAME, 
@@ -16,7 +17,14 @@ from config import (
 )
 
 logger = logging.getLogger()
-s3_client = boto3.client('s3')
+
+s3_config = Config(
+    connect_timeout=30,  # 30 segundos para estabelecer conexão
+    read_timeout=60,     # 60 segundos para operações de leitura
+    retries={'max_attempts': 5}  # Tentar 5 vezes em caso de falha
+)
+
+s3_client = boto3.client('s3', config=s3_config)
 
 def upload_json_to_s3(json_data, key_prefix, filename=None):
     """

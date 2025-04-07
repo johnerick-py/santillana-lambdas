@@ -4,12 +4,13 @@ Função Lambda principal para processamento de eventos Kinesis.
 import json
 import base64
 import logging
+import time
 from datetime import datetime
 
 # Importação dos módulos
-from config import KINESIS_NAME
+from config import KINESIS_NAME, BATCH_SIZE
 from utils.s3_utils import save_raw_event, save_processed_payload, save_unknown_pas_event
-from utils.redshift_utils import init_connection_pool, insert_batch_to_redshift
+from utils.redshift_utils import insert_batch_to_redshift
 from processors.event_processor import process_event_by_verb
 
 # Configuração de logging
@@ -56,17 +57,6 @@ def build_kinesis_log_record(record, s3_uri):
     }
     return log_record
 
-# def accumulate_processed_records(processed_dict):
-#     """
-#     Acumula os registros processados nos buffers por tabela.
-#     """
-#     if not processed_dict:
-#         return
-        
-#     for table, record_tuple in processed_dict.items():
-#         if record_tuple is not None:
-#             buffers[table].append(record_tuple)
-
 def accumulate_processed_records(processed_dict):
     """
     Acumula os registros processados nos buffers por tabela.
@@ -75,17 +65,20 @@ def accumulate_processed_records(processed_dict):
         return
         
     for table, record_data in processed_dict.items():
-        logger.info(f"processando accumulate")
-        logger.info(f"processando accumulate")
-        if record_data is not None:
-            # Verificar se é uma lista (para tabelas que retornam múltiplos registros)
-            if isinstance(record_data, list):
-                for item in record_data:
-                    if item is not None:
-                        buffers[table].append(item)
-            else:
-                # Para tabelas que retornam um único registro
-                buffers[table].append(record_data)
+        try:
+            if record_data is not None:
+                # Verificar se é uma lista (para tabelas que retornam múltiplos registros)
+                if isinstance(record_data, list):
+                    for item in record_data:
+                        if item is not None:
+                            buffers[table].append(item)
+                else:
+                    # Para tabelas que retornam um único registro
+                    buffers[table].append(record_data)
+            
+            logger.info(f"Acumulados registros para a tabela {table}. Tipo: {type(record_data)}. Total no buffer: {len(buffers[table])}")
+        except Exception as e:
+            logger.error(f"Erro ao acumular registros para a tabela {table}: {e}")
 
 def flush_buffers_to_redshift():
     """
@@ -93,67 +86,100 @@ def flush_buffers_to_redshift():
     """
     for table, records in buffers.items():
         if records:
-            logger.info(f"flush buffer")
             try:
+                # Verificar formato dos registros
+                for i, record in enumerate(records):
+                    if not isinstance(record, tuple) or len(record) != 2:
+                        logger.error(f"Formato inválido para registro {i} na tabela {table}: {record}")
+                        continue
                 
+                logger.info(f"Inserindo {len(records)} registros na tabela {table}")
                 insert_batch_to_redshift(records, table)
                 # Limpa o buffer após inserção bem-sucedida
                 buffers[table] = []
             except Exception as e:
                 logger.error(f"Falha na inserção para a tabela {table}: {e}")
-                # Buffers serão limpos na próxima execução
+
+def process_record(record):
+    """
+    Processa um único registro do Kinesis.
+    """
+    record_start = time.time()
+    
+    try:
+        # Decodifica o payload
+        decode_start = time.time()
+        encoded_data = record["data"]
+        payload_str = base64.b64decode(encoded_data).decode('utf-8')
+        payload_json = json.loads(payload_str)
+        logger.info(f"Decodificação do payload levou {time.time() - decode_start:.2f}s")
+        
+        # Salva o evento bruto no S3 e captura a URI
+        s3_start = time.time()
+        raw_event_s3_uri = save_raw_event(payload_json, record)
+        logger.info(f"Salvamento do evento bruto no S3 levou {time.time() - s3_start:.2f}s")
+        
+        # Prepara registro para tabela kinesis_log e acumula no buffer
+        kinesis_log = build_kinesis_log_record(record, raw_event_s3_uri)
+        buffers["infrastructure.kinesis_log"].append((None, kinesis_log))
+        
+        # Processa o payload conforme o verbID
+        process_start = time.time()
+        processed_dict = process_event_by_verb(payload_json)
+        
+        if processed_dict is None:
+            # VerbID desconhecido: salva no diretório específico
+            save_unknown_pas_event(payload_json)
+        else:
+            # Acumula os registros processados em buffers para cada tabela
+            accumulate_processed_records(processed_dict)
+            logger.info('printando processed dict')
+            logger.info(f'{processed_dict}')
+            
+            # Salva o payload processado no S3
+            save_processed_payload(payload_json)
+            
+        logger.info(f"Processamento do payload levou {time.time() - process_start:.2f}s")
+        
+        logger.info(f"Registro processado em {time.time() - record_start:.2f}s")
+        return True
+    except Exception as e:
+        logger.error(f"Erro ao processar registro: {e}", exc_info=True)
+        return False
 
 def lambda_handler(event, context):
     """
     Função principal da Lambda que processa eventos do Kinesis.
     """
+    start_time = time.time()
     logger.info(f"Iniciando processamento de {len(event)} registros")
-    logger.info(f"teste")
     
     # Inicializa o pool de conexões
-    init_connection_pool()
+    # Não precisamos mais disso com a Data API
     
-    # Processa cada registro do microbatch
-    for record in event:
-        try:
-            # Decodifica o payload
-            encoded_data = record["data"]
-            payload_str = base64.b64decode(encoded_data).decode('utf-8')
-            payload_json = json.loads(payload_str)
-            
-            # Salva o evento bruto no S3 e captura a URI
-            raw_event_s3_uri = save_raw_event(payload_json, record)
-            
-            # Prepara registro para tabela kinesis_log e acumula no buffer
-            kinesis_log = build_kinesis_log_record(record, raw_event_s3_uri)
-            buffers["infrastructure.kinesis_log"].append((None, kinesis_log))
-            
-            # Processa o payload conforme o verbID
-            processed_dict = process_event_by_verb(payload_json)
-            
-            if processed_dict is None:
-                # VerbID desconhecido: salva no diretório específico
-                save_unknown_pas_event(payload_json)
-                logger.info('printando processed dict None')
-                logger.info(f'{processed_dict}')
-            else:
-                # Acumula os registros processados em buffers para cada tabela
-                accumulate_processed_records(processed_dict)
-                logger.info('printando processed dict')
-                logger.info(f'{processed_dict}')
-                
-                # Salva o payload processado no S3
-                save_processed_payload(payload_json)
-                
-        except Exception as e:
-            logger.error(f"Erro ao processar registro: {e}", exc_info=True)
+    # Processa cada registro em mini-lotes
+    batch_size = BATCH_SIZE  # Usar o valor definido na configuração
+    batches_count = (len(event) + batch_size - 1) // batch_size
     
-    # Após processar todos os registros, insere os dados acumulados no Redshift
-    flush_buffers_to_redshift()
+    for batch_num in range(batches_count):
+        batch_start = time.time()
+        start_idx = batch_num * batch_size
+        end_idx = min(start_idx + batch_size, len(event))
+        
+        logger.info(f"Processando lote {batch_num+1}/{batches_count}, registros {start_idx+1}-{end_idx}")
+        
+        for i in range(start_idx, end_idx):
+            process_record(event[i])
+        
+        # Insere os dados após cada mini-lote
+        flush_start = time.time()
+        flush_buffers_to_redshift()
+        logger.info(f"Lote {batch_num+1} processado e enviado em {time.time() - batch_start:.2f}s (flush: {time.time() - flush_start:.2f}s)")
     
-    logger.info("Processamento concluído com sucesso")
+    total_time = time.time() - start_time
+    logger.info(f"Processamento concluído com sucesso em {total_time:.2f}s")
     
     return {
         "statusCode": 200,
-        "body": "Processamento concluído com sucesso!"
+        "body": f"Processamento concluído com sucesso em {total_time:.2f}s"
     }
