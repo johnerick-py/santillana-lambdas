@@ -114,6 +114,11 @@ def process_record(record):
         payload_json = json.loads(payload_str)
         logger.info(f"Decodificação do payload levou {time.time() - decode_start:.2f}s")
         
+        action = payload_json.get("meta", {}).get("action", "")
+        if "updated" in action.lower() or "deleted" in action.lower():
+            logger.info(f"Ignorando evento com action={action} - não requer processamento")
+            return True
+        
         # Salva o evento bruto no S3 e captura a URI
         s3_start = time.time()
         raw_event_s3_uri = save_raw_event(payload_json, record)

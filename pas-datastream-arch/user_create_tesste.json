@@ -17,7 +17,7 @@
 			"name": {
 				"firstName": "JOHN",
 				"middleName": "TESTE",
-				"lastName": "TESTELIST"
+				"lastName": "TESTEEXCLUDE"
 			},
 			"birthDate": "",
 			"language": { "refId": "00000000-0000-1000-0000-000000000000" },
