@@ -747,10 +747,10 @@ def process_user_school_class_event(payload):
                 (DIM_CLASS_PARTICIPANT[4], user_item.get("personRolRefId", None)),  # person_role_id
                 (DIM_CLASS_PARTICIPANT[5], user_item.get("active", None)),  # active_status
                 (DIM_CLASS_PARTICIPANT[6], payload.get("dt_year", None)),  # dt_year nao achei
-                (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("unoSchool", {}).get("refId", None)),#school_id
-                (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("schoolLevel", {}).get("refId", None)),#school_level_id
-                (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("schoolStageSeason", {}).get("refId", None)),#school_stage_season_id
-                (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("session", {}).get("refId", None)),#session_id
+                (DIM_CLASS_PARTICIPANT[7], payload.get("data", {}).get("attributes", {}).get("unoSchool", {}).get("refId", None)),#school_id
+                (DIM_CLASS_PARTICIPANT[8], payload.get("data", {}).get("attributes", {}).get("schoolLevel", {}).get("refId", None)),#school_level_id
+                (DIM_CLASS_PARTICIPANT[9], payload.get("data", {}).get("attributes", {}).get("schoolStageSeason", {}).get("refId", None)),#school_stage_season_id
+                (DIM_CLASS_PARTICIPANT[10], payload.get("data", {}).get("attributes", {}).get("session", {}).get("refId", None)),#session_id
             ],
             DIM_CLASS_PARTICIPANT
             )
@@ -766,10 +766,10 @@ def process_user_school_class_event(payload):
             (DIM_CLASS_PARTICIPANT[4], None),  # person_role_id
             (DIM_CLASS_PARTICIPANT[5], None),  # active_status
             (DIM_CLASS_PARTICIPANT[6], payload.get("dt_year", None)),  # dt_year nao achei
-            (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("unoSchool", {}).get("refId", None)),#school_id
-            (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("schoolLevel", {}).get("refId", None)),#school_level_id
-            (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("schoolStageSeason", {}).get("refId", None)),#school_stage_season_id
-            (DIM_CLASS_PARTICIPANT[6], payload.get("data", {}).get("attributes", {}).get("session", {}).get("refId", None)),#session_id
+            (DIM_CLASS_PARTICIPANT[7], payload.get("data", {}).get("attributes", {}).get("unoSchool", {}).get("refId", None)),#school_id
+            (DIM_CLASS_PARTICIPANT[8], payload.get("data", {}).get("attributes", {}).get("schoolLevel", {}).get("refId", None)),#school_level_id
+            (DIM_CLASS_PARTICIPANT[9], payload.get("data", {}).get("attributes", {}).get("schoolStageSeason", {}).get("refId", None)),#school_stage_season_id
+            (DIM_CLASS_PARTICIPANT[10], payload.get("data", {}).get("attributes", {}).get("session", {}).get("refId", None)),#session_id
         ],
         DIM_CLASS_PARTICIPANT
         )

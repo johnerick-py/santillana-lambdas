@@ -7,10 +7,10 @@ BUCKET_NAME = 'pas-prod-landing-zone'
 
 # Prefixos S3
 KEY_PREFIX_RAW = 'streaming_pas/validacao-wicco/'
-KEY_PREFIX_EVENT_LOG = 'streaming_pas/event/'
-KEY_PREFIX_UNKNOWN = 'streaming_pas/entitykey_unknown/'
-KEY_PREFIX_PROCESSED = 'streaming_pas/entity_key/'
-KEY_PREFIX_ERROR = 'streaming_pas/event_error/redshift_conn/'
+KEY_PREFIX_EVENT_LOG = 'streaming_pas/event_updated_deleted/'
+KEY_PREFIX_UNKNOWN = 'streaming_pas/entitykey_unknown_updated_deleted/'
+KEY_PREFIX_PROCESSED = 'streaming_pas/entity_key_updated_deleted/'
+KEY_PREFIX_ERROR = 'streaming_pas/event_error_updated_deleted/redshift_conn/'
 
 # Configurações Kinesis
 KINESIS_NAME = "pas-datastream"
