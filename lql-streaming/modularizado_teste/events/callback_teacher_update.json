@@ -1,0 +1,24 @@
+{
+	"type": "callback",
+	"action": "book_teacher_path update",
+	"description": "profesor actualiza plan lector",
+	"data": [
+		{
+			"type": "book_teacher_path",
+			"description": "datos del plan lector",
+			"action": "update",
+			"session_id": "00000000-0000-1000-0000-000000000775",
+			"product_id": "33",
+			"book_pack_ids": [34],
+			"id": "106097",
+			"name": "PEV 2",
+			"resume": "Libro grupal; \"De como fui a todas partes\""
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookTeacherPath",
+		"action": "trace_actualization"
+	},
+	"datetime": "2025-04-09T16:34:50+00:00"
+}

@@ -27,7 +27,7 @@ SHARDS = [
 BASE_JSON = {
         "meta": {
             "creationDatetime": "2025-01-02T13:09:29.848+00:00",
-            "action": "user_deleted",
+            "action": "user_updated",
             "company": "",
             "country": "BR",
             "messageId": "81db0ec4-5a4b-4167-8a33-5e12080c7249",
@@ -42,8 +42,8 @@ BASE_JSON = {
                 "sex": "Female",
                 "name": {
                     "firstName": "JOHN",
-                    "middleName": "TESTE",
-                    "lastName": "TESTEDELETED",
+                    "middleName": "TESTE2",
+                    "lastName": "TESTEUPDATED2",
                 },
                 "birthDate": "",
                 "language": {"refId": "00000000-0000-1000-0000-000000000000"},
@@ -354,7 +354,7 @@ Amostras: {len(latencies)}
 
 def run_throughput_test():
     """Função principal para executar o teste."""
-    total_messages = 10  # Total de mensagens a enviar
+    total_messages = 25  # Total de mensagens a enviar
     num_workers = 4  # Reduzido para 4 workers para melhor visualização dos logs
 
     print(

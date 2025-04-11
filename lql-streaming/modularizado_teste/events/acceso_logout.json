@@ -1,0 +1,139 @@
+{
+	"type": "acceso",
+	"action": "logout",
+	"description": "teste john streaming",
+	"data": [
+		{
+			"type": "user_role",
+			"description": "rol de usuario",
+			"action": "create",
+			"user_id": "00000000-0000-1000-0000-0000223344",
+			"role": "student"
+		},
+		{
+			"type": "network",
+			"description": "red - lql",
+			"action": "create",
+			"id": "112",
+			"name": "México Compartirlqldig_BV",
+			"empresa_id": "00000000-0000-1000-0000-000000000006"
+		},
+		{
+			"type": "calendar",
+			"description": "calendario escolar",
+			"action": "create",
+			"network_id": "112",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"start_date": "2024-08-01",
+			"end_date": "2025-07-31"
+		},
+		{
+			"type": "session_school_level",
+			"description": "estructura educativa por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"school_level_id": "00000000-0000-1000-0000-000000000017"
+		},
+		{
+			"type": "session_school_group_user",
+			"description": "relación de usuario con grupo, colegio y ciclo escolar",
+			"action": "create",
+			"user_id": "00000000-0000-1000-0000-000018667468",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"school_id": "00000000-0000-1000-0000-000000011294",
+			"group_id": "00000024-0000-1000-0000-000000000016"
+		},
+		{
+			"type": "session_network_school",
+			"description": "relación del colegio y red por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"school_id": "00000000-0000-1000-0000-000000011294",
+			"network_id": "112"
+		},
+		{
+			"type": "product",
+			"description": "producto: recoge los libros disponibles - lql",
+			"action": "create",
+			"id": "18",
+			"name": "loqueleo México"
+		},
+		{
+			"type": "session_user_product",
+			"description": "relación usuario y producto por ciclo",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"user_id": "00000000-0000-1000-0000-000018667468",
+			"product_id": "18"
+		},
+		{
+			"type": "session_network_product",
+			"description": "relación red y producto por ciclo",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"network_id": "112",
+			"product_id": "18"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "40",
+			"product_id": "18"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "Demo",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"product_id": "18",
+			"book_pack_id": "40"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"group_id": "00000024-0000-1000-0000-000000000016",
+			"book_pack_id": "40"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "28",
+			"product_id": "18"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "LQL",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"product_id": "18",
+			"book_pack_id": "28"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000996",
+			"group_id": "00000024-0000-1000-0000-000000000016",
+			"book_pack_id": "28"
+		},
+		{
+			"type": "user_cookie_session",
+			"description": "sessión de usuario",
+			"action": "update",
+			"id": "1f718bf2c358a50ca6a3b6e3b6e16f66",
+			"finished_at": "2025-04-09T15:16:59Z"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "UserSessionController",
+		"action": "trace_datalog_logout"
+	},
+	"datetime": "2025-04-09T15:16:59+00:00"
+}

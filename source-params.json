@@ -1,0 +1,9 @@
+{
+    "KinesisStreamParameters": {
+      "BatchSize": 25,
+      "MaximumBatchingWindowInSeconds": 1,
+      "MaximumRecordAgeInSeconds":300,
+      "MaximumRetryAttempts": 5,
+      "ParallelizationFactor": 5
+    }
+}

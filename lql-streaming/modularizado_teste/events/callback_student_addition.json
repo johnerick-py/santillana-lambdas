@@ -1,0 +1,26 @@
+{
+	"type": "callback",
+	"action": "book_student_path addition",
+	"description": "profesor asigna plan lector a un alumno",
+	"data": [
+		{
+			"type": "book_student_path",
+			"description": "datos de asociación entre un alumno y un plan lector",
+			"action": "create",
+			"user_id": "00000000-0000-1000-0000-000025396977",
+			"book_teacher_path_id": "106100",
+			"id": "2262995",
+			"status": "pending",
+			"cached_progress": 0,
+			"total_sessions": 6,
+			"completed_sessions": 0,
+			"updated_at": "2025-04-09T18:44:03+02:00"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookStudentPath",
+		"action": "trace_creation"
+	},
+	"datetime": "2025-04-09T16:44:03+00:00"
+}

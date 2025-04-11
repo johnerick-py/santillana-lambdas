@@ -1,0 +1,162 @@
+{
+	"type": "callback",
+	"action": "book_teacher_path_item addition",
+	"description": "profesor añade un libro a un plan lector",
+	"data": [
+		{
+			"type": "book",
+			"description": "libro digital",
+			"action": "create",
+			"isbn": "9789504666486",
+			"title": "Caro dice:",
+			"author_name": "María Inés",
+			"author_surname": "Falconi"
+		},
+		{
+			"type": "product",
+			"description": "producto: recoge los libros disponibles - lql",
+			"action": "create",
+			"id": "34",
+			"name": "loqueleo Perú"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "45",
+			"product_id": "34"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "BASICA",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"product_id": "34",
+			"book_pack_id": "45"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_pack_id": "45"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "44",
+			"product_id": "34"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "PAMER",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"product_id": "34",
+			"book_pack_id": "44"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_pack_id": "44"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "30",
+			"product_id": "34"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "Demo",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"product_id": "34",
+			"book_pack_id": "30"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_pack_id": "30"
+		},
+		{
+			"type": "book_pack",
+			"description": "pack de libros - lql",
+			"action": "create",
+			"id": "6",
+			"product_id": "34"
+		},
+		{
+			"type": "session_product_book_pack",
+			"description": "relación producto y pack de libros por ciclo",
+			"action": "create",
+			"book_pack_name": "Premium",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"product_id": "34",
+			"book_pack_id": "6"
+		},
+		{
+			"type": "session_group_book_pack",
+			"description": "relación pack de libros con grupo por ciclo escolar",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_pack_id": "6"
+		},
+		{
+			"type": "session_book_book_pack",
+			"description": "relación del libro digital y pack de libros por ciclo",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_isbn": "9789504666486",
+			"book_pack_id": "44"
+		},
+		{
+			"type": "session_book_book_pack",
+			"description": "relación del libro digital y pack de libros por ciclo",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_isbn": "9789504666486",
+			"book_pack_id": "30"
+		},
+		{
+			"type": "session_book_book_pack",
+			"description": "relación del libro digital y pack de libros por ciclo",
+			"action": "create",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_isbn": "9789504666486",
+			"book_pack_id": "6"
+		},
+		{
+			"type": "session_book_product",
+			"description": "relación del libro digital y producto por ciclo",
+			"action": "create",
+			"book_serie": "blue",
+			"session_id": "00000000-0000-1000-0000-000000000206",
+			"book_isbn": "9789504666486",
+			"product_id": "34"
+		},
+		{
+			"type": "book_teacher_path_item",
+			"description": "datos de asociación entre un libro y un plan lector",
+			"action": "create",
+			"id": "351315",
+			"book_teacher_path_id": "106089",
+			"book_isbn": "9789504666486"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookTeacherPathItem",
+		"action": "trace_creation"
+	},
+	"datetime": "2025-04-09T15:23:50+00:00"
+}

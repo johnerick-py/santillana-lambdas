@@ -1,0 +1,19 @@
+{
+	"type": "callback",
+	"action": "book_teacher_path_item substraction",
+	"description": "profesor quita un libro a un plan lector",
+	"data": [
+		{
+			"type": "book_teacher_path_item",
+			"description": "datos de asociación entre un libro y un plan lector",
+			"action": "delete",
+			"id": "351319"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookTeacherPathItem",
+		"action": "trace_deletion"
+	},
+	"datetime": "2025-04-09T15:36:09+00:00"
+}

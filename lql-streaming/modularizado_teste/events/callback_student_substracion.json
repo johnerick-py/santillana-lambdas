@@ -1,0 +1,23 @@
+{
+	"type": "callback",
+	"action": "book_student_path substraction",
+	"description": "profesor quita plan lector a un alumno",
+	"data": [
+		{
+			"type": "book_student_path",
+			"description": "datos de asociación entre un alumno y un plan lector",
+			"action": "delete",
+			"id": "2262717",
+			"cached_progress": 0,
+			"total_sessions": 0,
+			"completed_sessions": 0,
+			"updated_at": "2025-04-09T16:15:13+00:00"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookStudentPath",
+		"action": "trace_deletion"
+	},
+	"datetime": "2025-04-09T16:15:13+00:00"
+}

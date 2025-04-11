@@ -1,11 +1,11 @@
 {
 	"meta": {
 		"creationDatetime": "2025-01-03T13:40:09.460+00:00",
-		"action": "unoSchool_updated",
+		"action": "unoSchool_created",
 		"company": "",
 		"country": "AR",
 		"messageId": "492d1139-ce7e-47c3-8dcb-8a65aa84e56a",
-		"entityKey": "UNOSCHOOL",
+		"entityKey": "ARTICLE",
 		"providerName": "SMS_CONSUCORP_PUBL_PRO"
 	},
 	"data": {

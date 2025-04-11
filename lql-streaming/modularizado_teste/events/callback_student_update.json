@@ -1,0 +1,24 @@
+{
+	"type": "callback",
+	"action": "book_student_path update",
+	"description": "actualización de estadísticas de plan lector de un alumno",
+	"data": [
+		{
+			"type": "book_student_path",
+			"description": "datos de asociación entre un alumno y un plan lector",
+			"action": "update",
+			"id": "2232890",
+			"status": "completed",
+			"cached_progress": 100,
+			"total_sessions": 15,
+			"completed_sessions": 15,
+			"updated_at": "2025-04-09T17:30:00+02:00"
+		}
+	],
+	"backtrace": {
+		"origin": "backend",
+		"component": "BookStudentPath",
+		"action": "trace_actualization"
+	},
+	"datetime": "2025-04-09T15:30:00+00:00"
+}
