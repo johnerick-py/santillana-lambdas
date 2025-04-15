@@ -72,6 +72,31 @@ def main():
     # Passo 2: Inicializar Spark
     spark = initialize_spark()
     
+    def test_gpu_acceleration(spark):
+        """Teste para verificar se a aceleração GPU está funcionando"""
+        print("\n=== TESTANDO ACELERAÇÃO GPU ===")
+        # Criar um dataframe de teste
+        data = [(i, f"test_{i}") for i in range(1000000)]
+        df = spark.createDataFrame(data, ["id", "value"])
+        
+        # Explicar o plano de execução
+        print("Plano de execução com suporte a GPU:")
+        spark.sql("EXPLAIN EXTENDED SELECT count(*) FROM (SELECT id, value FROM VALUES (1, 'a'), (2, 'b'), (3, 'c') AS t(id, value))").show(truncate=False)
+        
+        # Executar uma operação para testar a GPU
+        start = time.time()
+        result = df.groupBy("value").count().count()
+        end = time.time()
+        
+        print(f"Operação concluída em {end - start:.2f} segundos")
+        print(f"Número de grupos encontrados: {result}")
+        
+        # Verificar configurações RAPIDS
+        rapids_enabled = spark.conf.get("spark.rapids.sql.enabled")
+        print(f"RAPIDS habilitado: {rapids_enabled}")
+        
+    test_gpu_acceleration(spark)
+    
     try:
         # Passo 3: Definir anos e IDs a processar
         ids_to_process = ID_PREFIXES_DEFAULT.copy()

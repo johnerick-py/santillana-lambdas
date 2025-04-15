@@ -30,6 +30,8 @@ def load_parquet_data(spark, path, verbose=False):
     read_start = time.time()
     try:
         df = spark.read.parquet(path)
+        print("=== Plano de execução para leitura parquet ===")
+        df.explain(True)
         read_time = time.time() - read_start
         print(f"Tempo de leitura: {read_time:.2f} segundos")
         
@@ -39,7 +41,9 @@ def load_parquet_data(spark, path, verbose=False):
         
         # Aplica distinct para remover duplicidades
         distinct_start = time.time()
+        print("=== Plano de execução para distinct ===")
         df = df.distinct()
+        df.explain(True)
         distinct_time = time.time() - distinct_start
         print(f"Tempo de processamento distinct: {distinct_time:.2f} segundos")
         

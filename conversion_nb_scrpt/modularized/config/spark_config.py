@@ -6,83 +6,184 @@ Configurações do Spark para o projeto.
 """
 
 import os
+
+# No início do seu spark_config.py
+os.environ["AWS_DEFAULT_REGION"] = "us-east-1"  # Ajuste para sua região
+
 from pyspark.sql import SparkSession
 from config.settings import LOCAL_TEMP_DIR
 
 def initialize_spark():
     """
-    Inicializa a sessão Spark com as configurações necessárias.
-    
-    Returns:
-        SparkSession: A sessão Spark inicializada.
+    Inicializa a sessão Spark com as configurações necessárias e suporte a GPU.
     """
-    print("Inicializando sessão Spark...")
+    print("Inicializando sessão Spark com suporte a GPU...")
     
     # Garantir que o diretório temporário local existe
     os.makedirs(LOCAL_TEMP_DIR, exist_ok=True)
     
-    # Verificar se temos as variáveis de ambiente AWS definidas
+    # Obter variáveis AWS
     aws_access_key = os.environ.get('AWS_ACCESS_KEY_ID', '')
     aws_secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
     aws_session_token = os.environ.get('AWS_SESSION_TOKEN', '')
     
-    print(f"Variáveis AWS disponíveis antes da inicialização: {'Sim' if aws_access_key else 'Não'}")
-    print(f"AWS_ACCESS_KEY_ID: {aws_access_key[:4] + '****' if aws_access_key else 'NÃO DEFINIDO'}")
-    print(f"AWS_SECRET_ACCESS_KEY: {'DEFINIDO' if aws_secret_key else 'NÃO DEFINIDO'}")
-    print(f"AWS_SESSION_TOKEN: {'DEFINIDO' if aws_session_token else 'NÃO DEFINIDO'}")
-    
-    # Criar sessão Spark com configurações otimizadas
+    # Criar sessão Spark com configurações reduzidas e suporte a GPU
     spark = (
-        SparkSession.builder
-        .appName("WiccoToGoldParquet")
-        # Configurações de recursos
-        .config("spark.sql.shuffle.partitions", "400")
-        .config("spark.executor.memory", "12g")
-        .config("spark.driver.memory", "8g")
-        .config("spark.sql.adaptive.enabled", "true")
-        .config("spark.driver.cores", "16")
-        .config("spark.default.parallelism", "200")
-        .config("spark.dynamicAllocation.enabled", "true")
-        .config("spark.dynamicAllocation.minExecutors", "4")
-        .config("spark.dynamicAllocation.maxExecutors", "20")
-        # Configurações para pacotes
-        .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:3.3.1,com.amazonaws:aws-java-sdk-bundle:1.11.901")
-        # Configurações AWS S3
-        .config("spark.hadoop.fs.s3.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
-        .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
-        .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider")
-        .config("spark.hadoop.fs.s3a.access.key", aws_access_key)
-        .config("spark.hadoop.fs.s3a.secret.key", aws_secret_key)
-        .config("spark.hadoop.fs.s3a.session.token", aws_session_token)
-        .config("spark.hadoop.fs.s3a.endpoint", "s3.amazonaws.com")
-        .config("spark.hadoop.fs.s3a.path.style.access", "true")
-        .config("spark.hadoop.fs.s3a.connection.establish.timeout", "5000")
-        .config("spark.hadoop.fs.s3a.connection.timeout", "10000")
-        # Outras configurações
-        .config("spark.sql.parquet.compression.codec", "snappy")
-        .enableHiveSupport()
-        .getOrCreate()
-    )
+    SparkSession.builder
+    .appName("WiccoToGoldParquet")
+
+    # Recursos otimizados para i5-10400, 16GB RAM, RTX 2060 Super (8GB)
+    .config("spark.executor.cores", "4")
+    .config("spark.executor.memory", "4g")
+    .config("spark.driver.memory", "4g")
+    .config("spark.sql.shuffle.partitions", "100")
+    .config("spark.default.parallelism", "6")
+    .config("spark.dynamicAllocation.enabled", "true")
+    .config("spark.dynamicAllocation.minExecutors", "1")
+    .config("spark.dynamicAllocation.maxExecutors", "2")
+
+    # JARs necessários (RAPIDS + AWS)
+    .config("spark.jars", "/home/drchapeu/Documents/ajuda_school_level/modularized/jars/rapids-4-spark_2.12-23.08.0.jar")
+    .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:3.3.1,com.amazonaws:aws-java-sdk-bundle:1.11.901")
+
+    # RAPIDS configs (GPU)
+    .config("spark.plugins", "com.nvidia.spark.SQLPlugin")
+    .config("spark.rapids.sql.enabled", "true")
+    .config("spark.rapids.memory.pinnedPool.size", "2g")
+    .config("spark.rapids.sql.concurrentGpuTasks", "2")
+    .config("spark.rapids.sql.explain", "ALL")
+
+    # AWS S3 configs
+    .config("spark.hadoop.fs.s3.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+    .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+    .config("spark.hadoop.fs.s3a.aws.credentials.provider", "com.amazonaws.auth.DefaultAWSCredentialsProviderChain")
+    .config("spark.hadoop.fs.s3a.endpoint", "s3.amazonaws.com")
+    .config("spark.hadoop.fs.s3a.path.style.access", "true")
+
+    # Memória offHeap (alivia RAM para GPU)
+    .config("spark.memory.offHeap.enabled", "true")
+    .config("spark.memory.offHeap.size", "1g")
+
+    # Compressão Parquet
+    .config("spark.sql.parquet.compression.codec", "snappy")
+
+    .enableHiveSupport()
+    .getOrCreate()
+)
+
     
     # Configurações adicionais
     spark.conf.set("spark.sql.parquet.binaryAsString", "true")
     spark.conf.set("spark.sql.legacy.timeParserPolicy", "LEGACY")
     
-    # Configuração adicional direta no Hadoop
+    # Configuração de log
+    spark.sparkContext.setLogLevel("WARN")
+    
+    # Configuração AWS direta se disponível
     hadoop_conf = spark.sparkContext._jsc.hadoopConfiguration()
-    hadoop_conf.set("fs.s3a.access.key", aws_access_key)
-    hadoop_conf.set("fs.s3a.secret.key", aws_secret_key)
-    hadoop_conf.set("fs.s3a.session.token", aws_session_token)
-    hadoop_conf.set("fs.s3.access.key", aws_access_key)
-    hadoop_conf.set("fs.s3.secret.key", aws_secret_key)
-    hadoop_conf.set("fs.s3.session.token", aws_session_token)
+    hadoop_conf.set("fs.s3a.aws.credentials.provider", "com.amazonaws.auth.DefaultAWSCredentialsProviderChain")
     
-    # Para depuração - mostrar as credenciais configuradas
-    access_key = hadoop_conf.get("fs.s3a.access.key")
-    if access_key:
-        print(f"Hadoop configurado com chave: {access_key[:4]}****")
-    else:
-        print("AVISO: Hadoop configurado com chave de acesso vazia!")
+    if aws_access_key:
+        hadoop_conf.set("fs.s3a.access.key", aws_access_key)
+        hadoop_conf.set("fs.s3.access.key", aws_access_key)
+    if aws_secret_key:
+        hadoop_conf.set("fs.s3a.secret.key", aws_secret_key)
+        hadoop_conf.set("fs.s3.secret.key", aws_secret_key)
+    if aws_session_token:
+        hadoop_conf.set("fs.s3a.session.token", aws_session_token)
+        hadoop_conf.set("fs.s3.session.token", aws_session_token)
     
-    print("Sessão Spark inicializada com sucesso.")
+    print("Sessão Spark inicializada com suporte a GPU.")
     return spark
+
+# def initialize_spark():
+#     """
+#     Inicializa a sessão Spark com as configurações necessárias.
+    
+#     Returns:
+#         SparkSession: A sessão Spark inicializada.
+#     """
+#     print("Inicializando sessão Spark...")
+    
+#     # Garantir que o diretório temporário local existe
+#     os.makedirs(LOCAL_TEMP_DIR, exist_ok=True)
+    
+#     # Verificar se temos as variáveis de ambiente AWS definidas
+#     aws_access_key = os.environ.get('AWS_ACCESS_KEY_ID', '')
+#     aws_secret_key = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
+#     aws_session_token = os.environ.get('AWS_SESSION_TOKEN', '')
+    
+#     print(f"Variáveis AWS disponíveis antes da inicialização: {'Sim' if aws_access_key else 'Não'}")
+#     print(f"AWS_ACCESS_KEY_ID: {aws_access_key[:4] + '****' if aws_access_key else 'NÃO DEFINIDO'}")
+#     print(f"AWS_SECRET_ACCESS_KEY: {'DEFINIDO' if aws_secret_key else 'NÃO DEFINIDO'}")
+#     print(f"AWS_SESSION_TOKEN: {'DEFINIDO' if aws_session_token else 'NÃO DEFINIDO'}")
+    
+#     # Criar sessão Spark com configurações otimizadas - usando configuração similar
+#     # ao código que está funcionando
+#     spark = (
+#         SparkSession.builder
+#         .appName("WiccoToGoldParquet")
+#         # Configurações de recursos
+#         .config("spark.sql.shuffle.partitions", "100")
+#         .config("spark.executor.memory", "4g")
+#         .config("spark.driver.memory", "4g")
+#         .config("spark.sql.adaptive.enabled", "true")
+#         .config("spark.driver.cores", "16")
+#         .config("spark.default.parallelism", "50")
+#         .config("spark.dynamicAllocation.enabled", "true")
+#         .config("spark.dynamicAllocation.minExecutors", "1")
+#         .config("spark.dynamicAllocation.maxExecutors", "6")
+#         .config("spark.memory.offHeap.enabled", "true")
+#         .config("spark.memory.offHeap.size", "1g")
+#         # Configurações para pacotes
+#         .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:3.3.1,com.amazonaws:aws-java-sdk-bundle:1.11.901")
+#         # Configurações AWS S3 - MUDANÇA IMPORTANTE: usando DefaultAWSCredentialsProviderChain
+#         .config("spark.hadoop.fs.s3.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+#         .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem")
+#         .config("spark.hadoop.fs.s3a.aws.credentials.provider", "com.amazonaws.auth.DefaultAWSCredentialsProviderChain")
+#         .config("spark.hadoop.fs.s3a.endpoint", "s3.amazonaws.com")
+#         .config("spark.hadoop.fs.s3a.path.style.access", "true")
+#         .config("spark.hadoop.fs.s3a.connection.establish.timeout", "10000")
+#         .config("spark.hadoop.fs.s3a.connection.timeout", "20000")
+#         # Outras configurações
+#         .config("spark.sql.parquet.compression.codec", "snappy")
+#         .enableHiveSupport()
+#         .getOrCreate()
+#     )
+    
+#     # Configurações adicionais
+#     spark.conf.set("spark.sql.parquet.binaryAsString", "true")
+#     spark.conf.set("spark.sql.legacy.timeParserPolicy", "LEGACY")
+    
+#     # Definir o nível de log
+#     spark.sparkContext.setLogLevel("WARN")
+    
+#     # Configuração adicional direta no Hadoop
+#     hadoop_conf = spark.sparkContext._jsc.hadoopConfiguration()
+    
+#     # Configurar explicitamente as credenciais se estiverem disponíveis
+#     if aws_access_key:
+#         hadoop_conf.set("fs.s3a.access.key", aws_access_key)
+#         hadoop_conf.set("fs.s3.access.key", aws_access_key)
+#     if aws_secret_key:
+#         hadoop_conf.set("fs.s3a.secret.key", aws_secret_key)
+#         hadoop_conf.set("fs.s3.secret.key", aws_secret_key)
+#     if aws_session_token:
+#         hadoop_conf.set("fs.s3a.session.token", aws_session_token)
+#         hadoop_conf.set("fs.s3.session.token", aws_session_token)
+    
+#     # Reforçar o provider de credenciais
+#     hadoop_conf.set("fs.s3a.aws.credentials.provider", "com.amazonaws.auth.DefaultAWSCredentialsProviderChain")
+    
+#     # Mostrar as configurações atuais para debug
+#     access_key = hadoop_conf.get("fs.s3a.access.key")
+#     provider = hadoop_conf.get("fs.s3a.aws.credentials.provider")
+    
+#     if access_key:
+#         print(f"Hadoop configurado com chave: {access_key[:4]}****")
+#     else:
+#         print(f"Hadoop usando provider: {provider}")
+    
+#     print("Sessão Spark inicializada com sucesso.")
+#     return spark
+
