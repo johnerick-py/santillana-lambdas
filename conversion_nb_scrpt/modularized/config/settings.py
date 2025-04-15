@@ -59,7 +59,7 @@ EXCLUDED_STATEMENT_IDS = [
 RESULT_TABLE_NAME = "dim_lrs_result"
 RESULT_SCORM_TABLE_NAME = "dim_lrs_result_scorm"
 
-# Caminhos para os arquivos - IMPORTANTE: Use s3a:// em vez de s3://
+# Caminhos para os arquivos
 def get_input_path(id_prefix, year, data_type="results"):
     """Obtém o caminho completo do S3 para os dados de entrada"""
     path = f"{S3_INPUT_BASE_PATH}/{id_prefix}/{year}/{data_type}/"

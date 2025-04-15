@@ -9,12 +9,45 @@ Este script orquestra o fluxo de trabalho completo para transformação de dados
 import os
 import time
 import traceback
+import subprocess
 from dotenv import load_dotenv
 
 # Carregar configurações do arquivo .env
 load_dotenv()
 
-# Importar módulos do projeto
+# Importante: Verifique a validade do login SSO antes de continuar
+def verify_aws_sso_login():
+    """Verifica se o login SSO está ativo e válido."""
+    try:
+        profile = os.getenv("AWS_PROFILE", "john-prod")
+        print(f"Verificando credenciais para o perfil AWS: {profile}")
+        
+        result = subprocess.run(
+            ["aws", "sts", "get-caller-identity", "--profile", profile],
+            capture_output=True, text=True
+        )
+        
+        if result.returncode == 0:
+            print("✅ Login AWS SSO ativo e válido.")
+            return True
+        else:
+            print("❌ Login AWS SSO inválido ou expirado.")
+            print("Mensagem:", result.stderr)
+            print("\nPor favor, execute o comando abaixo para fazer login:")
+            print(f"aws sso login --profile {profile}")
+            return False
+    except Exception as e:
+        print(f"Erro ao verificar login SSO: {e}")
+        print("\nPor favor, execute o comando abaixo para fazer login:")
+        print(f"aws sso login --profile {profile}")
+        return False
+
+# Verificar login SSO antes de importar resto do código
+if not verify_aws_sso_login():
+    print("Encerrando o script devido a problemas com o login SSO.")
+    exit(1)
+
+# Importar módulos do projeto somente após a verificação do SSO
 from config.settings import YEARS_DEFAULT, ID_PREFIXES_DEFAULT, PROCESS_896_DATA, COPY_TO_REDSHIFT
 from config.spark_config import initialize_spark
 from utils.aws_utils import get_sso_credentials
