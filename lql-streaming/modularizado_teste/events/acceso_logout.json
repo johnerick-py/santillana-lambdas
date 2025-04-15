@@ -127,7 +127,7 @@
 			"description": "sessión de usuario",
 			"action": "update",
 			"id": "1f718bf2c358a50ca6a3b6e3b6e16f66",
-			"finished_at": "2025-04-09T15:16:59Z"
+			"finished_at": "2025-04-09T15:16:59Z",
 		}
 	],
 	"backtrace": {
