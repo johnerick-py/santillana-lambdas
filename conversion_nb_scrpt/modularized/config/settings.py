@@ -36,13 +36,14 @@ SECRET_NAME = os.getenv("SECRET_NAME", "prod/redshift/aplication/access")
 
 # Configurações de processamento
 PROCESS_896_DATA = os.getenv("PROCESS_896_DATA", "false").lower() == "true"
-COPY_TO_REDSHIFT = os.getenv("COPY_TO_REDSHIFT", "false").lower() == "true"
-BATCH_SIZE = int(os.getenv("BATCH_SIZE", "2"))
-COALESCE_PARTITIONS = int(os.getenv("COALESCE_PARTITIONS", "2"))
+COPY_TO_REDSHIFT = os.getenv("COPY_TO_REDSHIFT", "true").lower() == "true"
+BATCH_SIZE = int(os.getenv("BATCH_SIZE", "50"))
+COALESCE_PARTITIONS = int(os.getenv("COALESCE_PARTITIONS", "1"))
 
 # Definições de anos e IDs a processar por padrão
 YEARS_DEFAULT = ["2024", "2025"]
-ID_PREFIXES_DEFAULT = ["7447", "7449", "7450", "7460"]
+#ID_PREFIXES_DEFAULT = ["7447", "7449", "7450", "7460"]
+ID_PREFIXES_DEFAULT = ["7449"]
 if PROCESS_896_DATA:
     ID_PREFIXES_DEFAULT.append("896")
     
