@@ -13,7 +13,7 @@ kinesis_client = session.client(
 )
 
 # Nome do stream Kinesis
-STREAM_NAME = "pas-datastream"
+STREAM_NAME = "teste-call-suport"
 
 # Lista de shards e hash keys para distribuição
 SHARDS = [
@@ -88,6 +88,8 @@ BASE_JSON = {
             },
         },
     }
+
+
 
 
 # Lock para impressão sincronizada
@@ -354,8 +356,8 @@ Amostras: {len(latencies)}
 
 def run_throughput_test():
     """Função principal para executar o teste."""
-    total_messages = 25  # Total de mensagens a enviar
-    num_workers = 4  # Reduzido para 4 workers para melhor visualização dos logs
+    total_messages = 3  # Total de mensagens a enviar
+    num_workers = 1  # Reduzido para 4 workers para melhor visualização dos logs
 
     print(
         f"""

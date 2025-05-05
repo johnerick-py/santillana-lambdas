@@ -11,24 +11,24 @@
 	"data": {
 		"eventId": "a6768559-805b-4872-b2da-13b1e971d386",
 		"attributes": {
-			"refId": "00000000-0000-1000-0000-000041034440",
-			"person": { "refId": "00000000-0000-1000-0000-000019257284" },
+			"refId": "00000000-0000-1000-0000-000041034440", // streaming.dim_user_role col: user_role_id
+			"person": { "refId": "00000000-0000-1000-0000-000019257284" }, // refId streaming.dim_user_role col: person_id
 			"unoStudent": {
-				"refId": "00000000-0000-1000-0000-000027191018",
+				"refId": "00000000-0000-1000-0000-000027191018", // streaming.dim_user_role col: student_id
 				"schoolGradeGroup": {
-					"refId": "00000000-0000-1000-0000-000001129502",
-					"grade": { "refId": "00000000-0000-1000-0000-000000000182" },
-					"group": { "refId": "00000000-0000-1000-0000-000000000805" }
+					"refId": "00000000-0000-1000-0000-000001129502", // refId streaming.dim_user_role col: school_grade_group_id
+					"grade": { "refId": "00000000-0000-1000-0000-000000000182" }, //grade.refId streaming.dim_user_role col: grade_id
+					"group": { "refId": "00000000-0000-1000-0000-000000000805" } //group.refId streaming.dim_user_role col: group_id
 				}
 			},
-			"active": true,
+			"active": true, // streaming.dim_user_role col: active_status bool
 			"schoolLevelSession": {
-				"refId": "00000000-0000-1000-0000-000000206152",
-				"session": { "refId": "00000000-0000-1000-0000-000000000375" },
-				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000053" },
-				"unoSchool": { "refId": "00000000-0000-1000-0000-000000013132" }
+				"refId": "00000000-0000-1000-0000-000000206152", // streaming.dim_user_role col: school_level_session_id
+				"session": { "refId": "00000000-0000-1000-0000-000000000375" }, //session.refId streaming.dim_user_role col: session_id
+				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000053" }, // schoollevel.refId streaming.dim_user_role col: school_level_id
+				"unoSchool": { "refId": "00000000-0000-1000-0000-000000013132" } // unoschool.refId streaming.dim_user_role col: school_id
 			},
-			"role": { "refId": "00000000-0000-1000-0000-000000000016" }
+			"role": { "refId": "00000000-0000-1000-0000-000000000016" } // refId streaming.dim_user_role col: role_id
 		}
 	}
 }

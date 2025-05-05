@@ -11,17 +11,21 @@
 	"data": {
 		"eventId": "72455369-e596-4323-bd8a-2021f5252e08",
 		"attributes": {
-			"refId": "00000000-0000-1000-0000-000000026162", // dim_school = school_id, dim_school_phone = school_phone_id, dim_school_email = school_email_id, dim_school_address = school_address_id
-			"addressList": [ // dim_school_address
+			"refId": "00000000-0000-1000-0000-000000026162", // gold.dim_school = school_id, gold.dim_school_phone = school_phone_id, gold.dim_school_email = school_email_id, gold.dim_school_address = school_address_id
+			"addressList": [ // gold.dim_school_address
 				{
 					"address": {
-						"addressType": "Physical", 
-						"street": { "line1": "GRIERSON" },
-						"city": "BUENOS AIRES",
-						"neighborhood": "CABA",
-						"postalCode": "1414",
-						"buildingSiteNumber": "",
-						"county": { "refId": "00000000-0000-1000-0000-000000023422" }
+						"addressType": "Physical",  // gold.dim_school_address col:  address_type
+						"street": { 
+							"line1": "GRIERSON"  // gold.dim_school_address 
+						},
+						"city": "BUENOS AIRES", // gold.dim_school_address col: city
+						"neighborhood": "CABA", // gold.dim_school_address col: neighborhood
+						"postalCode": "1414", // gold.dim_school_address col: postal_code
+						"buildingSiteNumber": "", // gold.dim_school_address col: building_site_number
+						"county": { 
+							"refId": "00000000-0000-1000-0000-000000023422" // gold.dim_school_address col: county_id
+						}
 					}
 				},
 				{
@@ -47,18 +51,29 @@
 					}
 				}
 			],
-			"phoneNumberList": [ // dim_school_phone
-				{ "phoneNumber": { "phoneNumberType": "Main", "number": "" } },
-				{ "phoneNumber": { "phoneNumberType": "Administrative", "number": "" } }
-			], // dim_school_email
+			"phoneNumberList": [ // gold.dim_school_phone
+				{ "phoneNumber": {
+					"phoneNumberType": "Main", // gold.dim_school_phone col: phone_type
+					"number": "6573452349" // gold.dim_school_phone col: phone_number
+					}
+				}, 
+				{ "phoneNumber": { 
+					"phoneNumberType": "Administrative",
+					"number": ""
+					}
+				}
+			], // gold.dim_school_email
 			"schoolEmailList": [
-				{ "schoolEmail": { "email": "compartir@santillana.com" } }
+				{ "schoolEmail": 
+					{ "email": "compartir@santillana.com" // gold.dim_school_email col: email
+					}
+				}
 			],
-			"name": "COLEGIO NUEVO DE LAS LOMAS", // dim_school - name
-			"schoolIdSystem": "SC25.LOMAS", // dim_school - school_id_system
-			"demo": false, // dim_school - demo_status
-			"active": false, // dim_school - active_status
-			"country": { "refId": "00000000-0000-1000-0000-000000000026" } // dim_school - country_id
+			"name": "COLEGIO NUEVO DE LAS LOMAS", // gold.dim_school - name
+			"schoolIdSystem": "SC25.LOMAS", // gold.dim_school - school_id_system
+			"demo": false, // gold.dim_school - demo_status
+			"active": false, // gold.dim_school - active_status
+			"country": { "refId": "00000000-0000-1000-0000-000000000026" } // gold.dim_school - country_id
 		}
 	}
 }

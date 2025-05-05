@@ -11,14 +11,14 @@
 	"data": {
 		"eventId": "10c10f81-d463-4832-adfb-a7425cec37e6",
 		"attributes": {
-			"refId": "00000000-0000-1000-0000-000000210080",
-			"unoSchool": { "refId": "00000000-0000-1000-0000-000000022618" },
-			"session": { "refId": "00000000-0000-1000-0000-000000000901" },
-			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000035" },
-			"empresa": { "refId": "00000000-0000-1000-0000-000000000056" },
-			"active": true,
-			"image": "",
-			"paymentAllowed": true
+			"refId": "00000000-0000-1000-0000-000000210080", // streaming.dim_school_level_session col: school_level_session_id
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000022618" }, // refId streaming.dim_school_level_session col: school_id
+			"session": { "refId": "00000000-0000-1000-0000-000000000901" }, // refId streaming.dim_school_level_session col: session_id 
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000035" }, // refId streaming.dim_school_level_session col: school_level_id 
+			"empresa": { "refId": "00000000-0000-1000-0000-000000000056" }, // refId streaming.dim_school_level_session col: company_id
+			"active": true, // streaming.dim_school_level_session col: active_status boolean
+			"image": "", // streaming.dim_school_level_session col: image
+			"paymentAllowed": true // streaming.dim_school_level_session col: payment_allowed boolean
 		}
 	}
 }

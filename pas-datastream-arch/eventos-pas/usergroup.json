@@ -2,19 +2,19 @@
 	"data": {
 		"eventId": "2ea0616b-157a-441f-a702-080e6063669e",
 		"attributes": {
-			"group": { "refId": "00000000-0000-1000-0000-000000000098" }, // group_id
-			"grade": { "refId": "00000000-0000-1000-0000-000000000072" }, // grade_id
-			"unoSchool": { "refId": "00000000-0000-1000-0000-000000024094" }, // school_id
-			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000029" }, // school_level_id
-			"schoolStageSeason": { "refId": "00000000-0000-1000-0000-000000191672" }, // school_stage_season_id
-			"schoolLevelSession": { "refId": "00000000-0000-1000-0000-000000191672" }, // school_level_session_id
-			"session": { "refId": "00000000-0000-1000-0000-000000001013" }, // session_id
+			"group": { "refId": "00000000-0000-1000-0000-000000000098" }, // streaming.dim_user_group col: group_id
+			"grade": { "refId": "00000000-0000-1000-0000-000000000072" }, // streaming.dim_user_group col: grade_id
+			"unoSchool": { "refId": "00000000-0000-1000-0000-000000024094" }, // streaming.dim_user_group col: school_id
+			"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000029" }, // streaming.dim_user_group col: school_level_id
+			"schoolStageSeason": { "refId": "00000000-0000-1000-0000-000000191672" }, // streaming.dim_user_group col: school_stage_season_id
+			"schoolLevelSession": { "refId": "00000000-0000-1000-0000-000000191672" }, // streaming.dim_user_group col: school_level_session_id
+			"session": { "refId": "00000000-0000-1000-0000-000000001013" }, // streaming.dim_user_group col: session_id
 			"userList": [
 				{
-					"personRefId": "00000000-0000-1000-0000-000018738534", // person_id
-					"roleRefId": "00000000-0000-1000-0000-000000000016", // role_id
-					"personRolRefId": "00000000-0000-1000-0000-000039379010", // person_rol_id
-					"active": true // active_status
+					"personRefId": "00000000-0000-1000-0000-000018738534", // streaming.dim_user_group col: person_id
+					"roleRefId": "00000000-0000-1000-0000-000000000016", // streaming.dim_user_group col: role_id
+					"personRolRefId": "00000000-0000-1000-0000-000039379010", // streaming.dim_user_group col: person_rol_id
+					"active": true // streaming.dim_user_group col: active_status
 				}
 			]
 		}

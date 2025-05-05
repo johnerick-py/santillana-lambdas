@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"creationDatetime": "2025-01-02T13:09:29.848+00:00",
-		"action": "user_updated",
+		"action": "user_created",
 		"company": "",
 		"country": "BR",
 		"messageId": "81db0ec4-5a4b-4167-8a33-5e12080c7249",
@@ -9,28 +9,28 @@
 		"providerName": "SMS_CONSUCORP_PUBL_PRO"
 	},
 	"data": {
-		"eventId": "8123a63e-286f-4458-9008-19d5507cfc26",
+		"eventId": "8123a63e-286f-4458-9008-19d5507cfc26", 
 		"attributes": {
-			"refId": "00000000-0000-1000-0000-000019256770",
-			"country": { "refId": "00000000-0000-1000-0000-000000000044" },
-			"sex": "Female",
+			"refId": "00000000-0000-1000-0000-000019256770", //table: gold.dim_user col: user_id
+			"country": { "refId": "00000000-0000-1000-0000-000000000044"}, // o refId de country é a table: gold.dim_user col: country_id
+			"sex": "Female", //table: gold.dim_user col: gender
 			"name": {
-				"firstName": "CENTRO EDUCACIONAL SANTOS GONZALEZ LTDA",
-				"middleName": "",
-				"lastName": ""
+				"firstName": "CENTRO EDUCACIONAL SANTOS GONZALEZ LTDA", //table: gold.dim_user col: first_name
+				"middleName": "", // table: gold.dim_user col: second_name
+				"lastName": "" // table: gold.dim_user col: last_name
 			},
-			"birthDate": "",
-			"language": { "refId": "00000000-0000-1000-0000-000000000000" },
+			"birthDate": "", // table: gold.dim_user col: birth_date
+			"language": { "refId": "00000000-0000-1000-0000-000000000000" }, // o refId de language e a table: gold.dim_user col: language_code
 			"addressList": [
 				{
 					"address": {
-						"addressType": "Physical",
-						"street": { "line1": "AV NITEROI" },
-						"city": "",
-						"neighborhood": "RETIRO SAO JOAQUIM",
-						"postalCode": "24813-327",
-						"buildingSiteNumber": " S/N",
-						"county": { "refId": "00000000-0000-1000-0000-000000020207" }
+						"addressType": "Physical", // table: gold.dim_user_address col: address_type
+						"street": { "line1": "AV NITEROI" }, 
+						"city": "", // table: gold.dim_user_address col: city
+						"neighborhood": "RETIRO SAO JOAQUIM", // table: gold.dim_user_address col:neighborhood
+						"postalCode": "24813-327", // table: gold.dim_user_address col: postal_code
+						"buildingSiteNumber": " S/N", // table: gold.dim_user_address col: building_site_number
+						"county": { "refId": "00000000-0000-1000-0000-000000020207" } // refId de county é table: gold.dim_user_address col: country
 					}
 				},
 				{
@@ -48,18 +48,26 @@
 			"phoneNumberList": [
 				{
 					"phoneNumber": {
-						"phoneNumberType": "Home",
-						"number": "21 99982 6115"
+						"phoneNumberType": "Home", // table: gold.dim_user_phone col:  phone_type
+						"number": "21 99982 6115" // table: gold.dim_user_phone col: phone_number
 					}
 				}
 			],
 			"personEmailList": [
-				{ "personEmail": { "email": "aninhasantosgonzalez@gmail.com" } }
+				{ 
+					"personEmail": {
+						"email": "aninhasantosgonzalez@gmail.com" // table: gold.dim_user_email col: email
+					}
+				}
 			],
 			"createdAt": 0,
 			"dischargeDate": 0,
 			"image": "",
-			"oficialId": "",
+			"user": { 
+				"username": "laranaomi.dejesussilva.4", // table: gold.dim_user col: uno_user_name
+				"active": 1 //table: gold.dim_user col: active_status coluna boolean
+			},
+			"oficialId": "",// table: gold.dim_user col: oficial_id
 			"timeZone": { "name": "America/Mexico_City" }
 		}
 	}

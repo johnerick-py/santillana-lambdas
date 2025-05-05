@@ -23,20 +23,20 @@ ENTITY_PROCESSORS = {
     #"CONTENTSCHOOLCLASS": process_content_school_class_event, # iremos usar futuramente
     #"CONTENTSCHOOLLEVELSESSION": process_school_level_session_event, # nao iremos processar este evento, desconsiderar
     #"CONTACTRELATIONSHIP": process_contact_relationship_event, # nao iremos processar este evento, desconsiderar
-    "SCHOOLCLASS": process_school_class_event, # dim_school_class 
+    "SCHOOLCLASS": process_school_class_event, # dim_school_class - ok
     "SCHOOLGRADEGROUP": process_school_grade_group_event, # dim_school_grade_group
     #"SCHOOLIMAGE": process_school_image_event, # nao iremos processar este evento, desconsiderar
     "SCHOOLLEVELSESSION": process_school_level_session_event, # dim_school_level_session
     "SESSION": process_session_event, # dim_session
-    "SUBJECTSCHOOLCLASS": process_subject_school_class_event, # dim_section_subject
-    "UNOSCHOOL": process_uno_school_event, # dim_school, dim_school_addres, dim_school_phone, dim_school_email
-    "USER": process_user_event, # dim_user, dim_user_phone, dim_user_email, dim_user_address
+    "SUBJECTSCHOOLCLASS": process_subject_school_class_event, # dim_section_subject - ok
+    "UNOSCHOOL": process_uno_school_event, # dim_school, dim_school_addres, dim_school_phone, dim_school_email - ok
+    "USER": process_user_event, # dim_user, dim_user_phone, dim_user_email, dim_user_address - ok
     #"USERARTICLENOTIFICATION": process_user_article_notification_event,  # nao iremos processar este evento, desconsiderar
     #"USERARTICLEROLE": process_user_article_role_event, # nao iremos processar este evento, desconsiderar
     "USERGROUP": process_user_group_event, # dim_user_group
     #"USERIMAGE": process_user_image_event, # nao iremos processar este evento, desconsiderar
     "USERROLE": process_user_role_event, # dim_user_role
-    "USERSCHOOLCLASS": process_user_school_class_event # dim_class_participants
+    "USERSCHOOLCLASS": process_user_school_class_event # dim_class_participants - ok
 }
 
 def process_event_by_verb(payload):

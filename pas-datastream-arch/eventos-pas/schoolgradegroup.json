@@ -11,19 +11,27 @@
 	"data": {
 		"eventId": "68e1e161-935f-4359-9228-a899a4ea8fe4",
 		"attributes": {
-			"refId": "00000000-0000-1000-0000-000001137713",
+			"refId": "00000000-0000-1000-0000-000001137713", // streaming.dim_school_grade_group col: school_grade_group_id
 			"schoolLevelSession": {
-				"refId": "00000000-0000-1000-0000-000000191016",
-				"unoSchool": { "refId": "00000000-0000-1000-0000-000000002485" },
-				"session": { "refId": "00000000-0000-1000-0000-000000000765" },
-				"schoolLevel": { "refId": "00000000-0000-1000-0000-000000000026" }
+				"refId": "00000000-0000-1000-0000-000000191016", // streaming.dim_school_grade_group col: school_level_session_id
+				"unoSchool": {
+					"refId": "00000000-0000-1000-0000-000000002485" // streaming.dim_school_grade_group col: school_id
+					},
+				"session": {
+					"refId": "00000000-0000-1000-0000-000000000765"  // streaming.dim_school_grade_group col: session_id
+					},
+				"schoolLevel": {
+					"refId": "00000000-0000-1000-0000-000000000026" // streaming.dim_school_grade_group col: school_level_id
+					}
 			},
-			"grade": { "refId": "00000000-0000-1000-0000-000000000059" },
+			"grade": { 
+				"refId": "00000000-0000-1000-0000-000000000059" // streaming.dim_school_grade_group col: grade_id
+				},
 			"group": {
-				"groupDescription": "Grupo J",
-				"refId": "00000000-0000-1000-0000-000000000079"
+				"groupDescription": "Grupo J", // streaming.dim_school_grade_group col: group_description
+				"refId": "00000000-0000-1000-0000-000000000079" // streaming.dim_school_grade_group col: group_id
 			},
-			"alias": "4\u00ba Cuarto grado J"
+			"alias": "4\u00ba Cuarto grado J" // streaming.dim_school_grade_group col: description
 		}
 	}
 }
